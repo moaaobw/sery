@@ -76,15 +76,6 @@ sudo lua5.3 Nero.lua
 done
 ]])
 Nero:close()
-local Run = io.open("Run", 'w')
-Run:write([[
-cd $(cd $(dirname $0); pwd)
-while(true) do
-screen -S ]]..Redis:get(SshId.."Info:Redis:Token:User")..[[ -X kill
-screen -S ]]..Redis:get(SshId.."Info:Redis:Token:User")..[[ ./Nero
-done
-]])
-Run:close()
 Redis:del(SshId.."Info:Redis:User:ID");Redis:del(SshId.."Info:Redis:User");Redis:del(SshId.."Info:Redis:Token:User");Redis:del(SshId.."Info:Redis:Token")
 os.execute('rm -rf luatele.zip ;chmod +x Nero;chmod +x Run;./Run')
 end
@@ -99,28 +90,52 @@ LuaTelelua = luatele.set_config{api_id=1846213,api_hash='c545c613b78f18a30744970
 function var(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-function chat_type(ChatId)
-if ChatId then
-local id = tostring(ChatId)
-if id:match("-100(%d+)") then
-Chat_Type = 'GroupBot' 
-elseif id:match("^(%d+)") then
-Chat_Type = 'UserBot' 
+clock = os.clock
+function sleep(n)
+local t0 = clock()
+while clock() - t0 <= n do end
+end
+function download_to_file(url, file_path) 
+local respbody = {} 
+local options = { url = url, sink = ltn12.sink.table(respbody), redirect = true } 
+local response = nil 
+options.redirect = false 
+response = {https.request(options)} 
+local code = response[2] 
+local headers = response[3] 
+local status = response[4] 
+if code ~= 200 then return false, code 
+end 
+file = io.open(file_path, "w+") 
+file:write(table.concat(respbody)) 
+file:close() 
+return file_path, code 
+end 
+function ctime(seconds)
+local seconds = tonumber(seconds)
+if seconds <= 0 then
+return "00:00"
 else
-Chat_Type = 'GroupBot' 
+hours = string.format("%02.f", math.floor(seconds/3600));
+mins = string.format("%02.f", math.floor(seconds/60 - (hours*60)));
+secs = string.format("%02.f", math.floor(seconds - hours*3600 - mins *60));
+return mins..":"..secs
 end
 end
-return Chat_Type
+function edit(chat,rep,text,parse, dis, disn, reply_markup)
+shh = tostring(text)
+if Redis:get(Nero..'Nero:rmzsource') then
+shh = shh:gsub("⋇︙",Redis:get(Nero..'Nero:rmzsource'))
 end
-function The_ControllerAll(UserId)
-ControllerAll = false
-local ListSudos = {Sudo_Id,1413037852}
-for k, v in pairs(ListSudos) do
-if tonumber(UserId) == tonumber(v) then
-ControllerAll = true
-end
-if Redis:sismember(Nero.."Nero:ControlAll:Groups",UserId) then
-ControllerAll = true
+local listm = Redis:smembers(Nero.."Nero:Words:r")
+for k,v in pairs(listm) do
+i ,j  = string.find(shh, v)
+if j and i then
+local x = string.sub(shh, i,j)
+local neww = Redis:get(Nero.."Nero:Word:Replace"..x)  
+shh = shh:gsub(x,neww)
+else
+shh = shh
 end
 end
 return ControllerAll
