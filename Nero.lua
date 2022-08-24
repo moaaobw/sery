@@ -8,8 +8,12 @@ json = require('libs/json')
 Redis = require('libs/redis').connect('127.0.0.1', 6379)
 http  = require("socket.http")
 https   = require("ssl.https")
+local Methods = io.open("./luatele.lua","r")
+if Methods then
+URL.tdlua_CallBack()
+end
 SshId = io.popen("echo $SSH_CLIENT ︙ awk '{ print $1}'"):read('*a')
-LuaTeletele = require 'LuaTeleTele'
+luatele = require 'luatele'
 local FileInformation = io.open("./Information.lua","r")
 if not FileInformation then
 if not Redis:get(SshId.."Info:Redis:Token") then
@@ -68,7 +72,7 @@ local Nero = io.open("Nero", 'w')
 Nero:write([[
 cd $(cd $(dirname $0); pwd)
 while(true) do
-sudo lua Nero.lua
+sudo lua5.3 Nero.lua
 done
 ]])
 Nero:close()
