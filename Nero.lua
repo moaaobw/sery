@@ -10,9 +10,8 @@ http  = require("socket.http")
 https   = require("ssl.https")
 local Methods = io.open("./luatele.lua","r")
 if Methods then
-URL.tdlua_CallBack()
-end
-SshId = io.popen("echo $SSH_CLIENT ︙ awk '{ print $1}'"):read('*a')
+URL.tdlua_CallBack() end
+SshId = io.popen("echo $SSH_CLIENT ︙ awk '{print $1}'"):read('*a')
 luatele = require 'luatele'
 local FileInformation = io.open("./Information.lua","r")
 if not FileInformation then
@@ -29,13 +28,10 @@ io.write('\27[1;34mتم حفظ التوكن بنجاح \nThe token been saved su
 TheTokenBot = TokenBot:match("(%d+)")
 os.execute('sudo rm -fr .CallBack-Bot/'..TheTokenBot)
 Redis:set(SshId.."Info:Redis:Token",TokenBot)
-Redis:set(SshId.."Info:Redis:Token:User",Json_Info.result.username)
-end 
+Redis:set(SshId.."Info:Redis:Token:User",Json_Info.result.username) end 
 else
-print('\27[1;34mلم يتم حفظ التوكن جرب مره اخره \nToken not saved, try again')
-end 
-os.execute('lua Nero.lua')
-end
+print('\27[1;34mلم يتم حفظ التوكن جرب مره اخره \nToken not saved, try again') end 
+os.execute('lua Nero.lua') end
 if not Redis:get(SshId.."Info:Redis:User") then
 io.write('\27[1;31mارسل معرف المطور الاساسي الان \nDeveloper UserName saved ↡\n\27[0;39;49m')
 local UserSudo = io.read():gsub('@','')
@@ -43,10 +39,8 @@ if UserSudo ~= '' then
 io.write('\n\27[1;34mتم حفظ معرف المطور \nDeveloper UserName saved \n\n\27[0;39;49m')
 Redis:set(SshId.."Info:Redis:User",UserSudo)
 else
-print('\n\27[1;34mلم يتم حفظ معرف المطور الاساسي \nDeveloper UserName not saved\n')
-end 
-os.execute('lua Nero.lua')
-end
+print('\n\27[1;34mلم يتم حفظ معرف المطور الاساسي \nDeveloper UserName not saved\n') end 
+os.execute('lua Nero.lua') end
 if not Redis:get(SshId.."Info:Redis:User:ID") then
 io.write('\27[1;31mارسل ايدي المطور الاساسي الان \nDeveloper ID saved ↡\n\27[0;39;49m')
 local UserId = io.read()
@@ -54,10 +48,8 @@ if UserId and UserId:match('(%d+)') then
 io.write('\n\27[1;34mتم حفظ ايدي المطور \nDeveloper ID saved \n\n\27[0;39;49m')
 Redis:set(SshId.."Info:Redis:User:ID",UserId)
 else
-print('\n\27[1;34mلم يتم حفظ ايدي المطور الاساسي \nDeveloper ID not saved\n')
-end 
-os.execute('lua Nero.lua')
-end
+print('\n\27[1;34mلم يتم حفظ ايدي المطور الاساسي \nDeveloper ID not saved\n') end 
+os.execute('lua Nero.lua') end
 local Informationlua = io.open("Information.lua", 'w')
 Informationlua:write([[
 return {
@@ -76,9 +68,17 @@ sudo lua5.3 Nero.lua
 done
 ]])
 Nero:close()
+local Run = io.open("Run", 'w')
+Run:write([[
+cd $(cd $(dirname $0); pwd)
+while(true) do
+screen -S ]]..Redis:get(SshId.."Info:Redis:Token:User")..[[ -X kill
+screen -S ]]..Redis:get(SshId.."Info:Redis:Token:User")..[[ ./Nero
+done
+]])
+Run:close()
 Redis:del(SshId.."Info:Redis:User:ID");Redis:del(SshId.."Info:Redis:User");Redis:del(SshId.."Info:Redis:Token:User");Redis:del(SshId.."Info:Redis:Token")
-os.execute('rm -rf luatele.zip ;chmod +x Nero;chmod +x Run;./Run')
-end
+os.execute('chmod +x Nero;chmod +x Run;./Run') end
 Information = dofile('./Information.lua')
 Sudo_Id = Information.SudoId
 UserSudo = Information.UserSudo
@@ -86,87 +86,34 @@ Token = Information.Token
 UserBot = Information.UserBot
 Nero = Token:match("(%d+)")
 os.execute('sudo rm -fr .CallBack-Bot/'..Nero)
-LuaTelelua = luatele.set_config{api_id=1846213,api_hash='c545c613b78f18a30744970910124d53',session_name=Nero,token=Token}
+LuaTele = luatele.set_config{api_id=2692371,api_hash='fe85fff033dfe0f328aeb02b4f784930',session_name=Nero,token=Token}
 function var(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-clock = os.clock
-function sleep(n)
-local t0 = clock()
-while clock() - t0 <= n do end
-end
-function download_to_file(url, file_path) 
-local respbody = {} 
-local options = { url = url, sink = ltn12.sink.table(respbody), redirect = true } 
-local response = nil 
-options.redirect = false 
-response = {https.request(options)} 
-local code = response[2] 
-local headers = response[3] 
-local status = response[4] 
-if code ~= 200 then return false, code 
-end 
-file = io.open(file_path, "w+") 
-file:write(table.concat(respbody)) 
-file:close() 
-return file_path, code 
-end 
-function ctime(seconds)
-local seconds = tonumber(seconds)
-if seconds <= 0 then
-return "00:00"
+function chat_type(ChatId)
+if ChatId then
+local id = tostring(ChatId)
+if id:match("-100(%d+)") then
+Chat_Type = 'GroupBot' 
+elseif id:match("^(%d+)") then
+Chat_Type = 'UserBot' 
 else
-hours = string.format("%02.f", math.floor(seconds/3600));
-mins = string.format("%02.f", math.floor(seconds/60 - (hours*60)));
-secs = string.format("%02.f", math.floor(seconds - hours*3600 - mins *60));
-return mins..":"..secs
+Chat_Type = 'GroupBot'  end end
+return Chat_Type
 end
-end
-function edit(chat,rep,text,parse, dis, disn, reply_markup)
-shh = tostring(text)
-if Redis:get(Nero..'Nero:rmzsource') then
-shh = shh:gsub("⋇︙",Redis:get(Nero..'Nero:rmzsource'))
-end
-local listm = Redis:smembers(Nero.."Nero:Words:r")
-for k,v in pairs(listm) do
-i ,j  = string.find(shh, v)
-if j and i then
-local x = string.sub(shh, i,j)
-local neww = Redis:get(Nero.."Nero:Word:Replace"..x)  
-shh = shh:gsub(x,neww)
-else
-shh = shh
-end
-end
+function The_ControllerAll(UserId)
+ControllerAll = false
+local ListSudos ={Sudo_Id,2069112486}  
+for k, v in pairs(ListSudos) do
+if tonumber(UserId) == tonumber(v) then
+ControllerAll = true end end
 return ControllerAll
-end
-function mderall(msg)
-mderall = false
-local statuse = Redis:sismember(Nero.."Nero:Distinguishedall:Group",msg.sender_id.user_id)
-if statuse then
-mderall = true
-end
-return mderall
 end
 function Controllerbanall(ChatId,UserId)
 Status = 0
-local Controll2 = Redis:sismember(Nero.."Nero:ControlAll:Groups",UserId)
+DevelopersAS = Redis:sismember(Nero.."Nero:DevelopersAS:Groups",UserId) 
 DevelopersQ = Redis:sismember(Nero.."Nero:DevelopersQ:Groups",UserId) 
-if UserId == 1413037852 then
-Status = true
-elseif UserId == Sudo_Id then  
-Status = true
-elseif UserId == Nero then
-Status = true
-elseif Controll2 then
-Status = true
-elseif DevelopersQ then
-Status = true
-else
-Status = false
-end
-return Status
-end
+if UserId == 2069112486 then Status = true elseif UserId == 2069112486 then Status = true elseif UserId == Sudo_Id then Status = true elseif UserId == Nero then Status = true elseif DevelopersAS then Status = true elseif DevelopersQ then Status = true else Status = false end return Status end
 function Controller(ChatId,UserId)
 Status = 0
 local Controll2 = Redis:sismember(Nero.."Nero:ControlAll:Groups",UserId)
