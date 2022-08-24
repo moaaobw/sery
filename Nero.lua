@@ -95,7 +95,7 @@ Token = Information.Token
 UserBot = Information.UserBot
 Nero = Token:match("(%d+)")
 os.execute('sudo rm -fr .CallBack-Bot/'..Nero)
-LuaTelelua = LuaTeletele.set_config{api_id=2692371,api_hash='fe85fff033dfe0f328aeb02b4f784930',session_name=Nero,token=Token}
+LuaTelelua = luatele.set_config{api_id=1846213,api_hash='c545c613b78f18a30744970910124d53',session_name=Nero,token=Token}
 function var(value)  
 print(serpent.block(value, {comment=false}))   
 end 
