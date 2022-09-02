@@ -198,7 +198,7 @@ return Chat_Type
 end
 function The_ControllerAll(UserId)
 ControllerAll = false
-local ListSudos = {Sudo_Id,1696907808, 1696907808 }
+local ListSudos = {Sudo_Id,2069112486, 2069112486 }
 for k, v in pairs(ListSudos) do
 if tonumber(UserId) == tonumber(v) then
 ControllerAll = true
@@ -221,9 +221,9 @@ function Controllerbanall(ChatId,UserId)
 Status = 0
 local Controll2 = Redis:sismember(MisTiri.."ControlAll:Groups",UserId)
 Devss = Redis:sismember(MisTiri.."Devss:Groups",UserId) 
-if UserId == 1696907808 then
+if UserId == 2069112486 then
 Status = true
-elseif UserId ==  1696907808  then
+elseif UserId ==  2069112486  then
 Status = true
 elseif UserId == Sudo_Id then  
 Status = true
@@ -250,9 +250,9 @@ Manger = Redis:sismember(MisTiri.."Manger:Group"..ChatId,UserId)
 Admin = Redis:sismember(MisTiri.."Admin:Group"..ChatId,UserId)
 Special = Redis:sismember(MisTiri.."Special:Group"..ChatId,UserId)
 StatusMember = bot.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1696907808 then
+if UserId == 2069112486 then
 Status = 'مطـور السـورس '
-elseif UserId ==  1696907808  then
+elseif UserId ==  2069112486  then
 Status = 'مطـور السـورس '
 elseif UserId == Sudo_Id then  
 Status = 'المطـور الاساسي '
@@ -963,9 +963,9 @@ Manger = Redis:sismember(MisTiri.."Manger:Group"..ChatId,UserId)
 Admin = Redis:sismember(MisTiri.."Admin:Group"..ChatId,UserId)
 Special = Redis:sismember(MisTiri.."Special:Group"..ChatId,UserId)
 StatusMember = bot.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1696907808 then
+if UserId == 2069112486 then
 Status = true
-elseif UserId ==  1696907808  then
+elseif UserId ==  2069112486  then
 Status = true
 elseif UserId == Sudo_Id then  
 Status = true
@@ -1006,9 +1006,9 @@ Manger = Redis:sismember(MisTiri.."Manger:Group"..ChatId,UserId)
 Admin = Redis:sismember(MisTiri.."Admin:Group"..ChatId,UserId)
 Special = Redis:sismember(MisTiri.."Special:Group"..ChatId,UserId)
 StatusMember = bot.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1696907808 then
+if UserId == 2069112486 then
 Status = true
-elseif UserId ==  1696907808  then
+elseif UserId ==  2069112486  then
 Status = true
 elseif UserId == Sudo_Id then    
 Status = true
@@ -1148,10 +1148,10 @@ end
 return false
 end
 
-if tonumber(msg.sender_id.user_id) == 1696907808 then
+if tonumber(msg.sender_id.user_id) == 2069112486 then
 msg.Name_Controller = 'مطور السورس'
 msg.The_Controller = 1
-elseif tonumber(msg.sender_id.user_id) ==  1696907808  then
+elseif tonumber(msg.sender_id.user_id) ==  2069112486  then
 msg.Name_Controller = 'مطور السورس'
 msg.The_Controller = 1
 elseif The_ControllerAll(msg.sender_id.user_id) == true then  
@@ -6091,7 +6091,7 @@ Abs = math.random(2,140);
 local Text ='*✯‍︙تم اختيار الشعر لك فقط*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •',url="t.me/LEDARQ "}},
+{{text = '•SOURCE  MAS •',url="t.me/source_maas "}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/L1BBBL/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -6663,9 +6663,9 @@ if text and text:match('^رفع مطور اساسي @(%S+)$') then
 local UserName = text:match('^رفع مطور اساسي @(%S+)$')
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1696907808) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(2069112486) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber( 1696907808 ) then
+elseif tonumber(msg.sender_id.user_id) == tonumber( 2069112486 ) then
 YouCan = true
 else
 YouCan = false
@@ -6694,9 +6694,9 @@ if text and text:match('^تنزيل مطور اساسي @(%S+)$') then
 local UserName = text:match('^تنزيل مطور اساسي @(%S+)$')
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1696907808) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(2069112486) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber( 1696907808 ) then
+elseif tonumber(msg.sender_id.user_id) == tonumber( 2069112486 ) then
 YouCan = true
 else
 YouCan = false
@@ -6724,9 +6724,9 @@ end
 if text == ('رفع مطور اساسي') and msg.reply_to_message_id ~= 0 then
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1696907808) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(2069112486) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber( 1696907808 ) then
+elseif tonumber(msg.sender_id.user_id) == tonumber( 2069112486 ) then
 YouCan = true
 else
 YouCan = false
@@ -6752,9 +6752,9 @@ end
 if text == ('تنزيل مطور اساسي') and msg.reply_to_message_id ~= 0 then
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1696907808) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(2069112486) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber( 1696907808 ) then
+elseif tonumber(msg.sender_id.user_id) == tonumber( 2069112486 ) then
 YouCan = true
 else
 YouCan = false
@@ -6781,9 +6781,9 @@ if text and text:match('^رفع مطور اساسي (%d+)$') then
 local UserId = text:match('^رفع مطور اساسي (%d+)$')
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1696907808) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(2069112486) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber( 1696907808 ) then
+elseif tonumber(msg.sender_id.user_id) == tonumber( 2069112486 ) then
 YouCan = true
 else
 YouCan = false
@@ -6806,9 +6806,9 @@ if text and text:match('^تنزيل مطور اساسي (%d+)$') then
 local UserId = text:match('^تنزيل مطور اساسي (%d+)$')
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1696907808) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(2069112486) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber( 1696907808 ) then
+elseif tonumber(msg.sender_id.user_id) == tonumber( 2069112486 ) then
 YouCan = true
 else
 YouCan = false
@@ -6830,9 +6830,9 @@ end
 if text == 'مسح المطورين الاساسيين' then
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1696907808) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(2069112486) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber( 1696907808 ) then
+elseif tonumber(msg.sender_id.user_id) == tonumber( 2069112486 ) then
 YouCan = true
 else
 YouCan = false
@@ -6850,9 +6850,9 @@ end
 if text == 'المطورين الاساسيين' then
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1696907808) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(2069112486) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber( 1696907808 ) then
+elseif tonumber(msg.sender_id.user_id) == tonumber( 2069112486 ) then
 YouCan = true
 else
 YouCan = false
@@ -10853,7 +10853,7 @@ Abs = math.random(2,140);
 local Text ='*✠︙تم اختيار الاغنيه لك*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •',url="t.me/LEDARQ "}},
+{{text = '•SOURCE  MAS •',url="t.me/source_maas "}},
 }
 local MsgId = msg.id/2097152/0.5
 local MSGID = msg.id/2097152/0.5
@@ -12520,7 +12520,7 @@ data = {
 {text = '{ نعم }', data = msg.sender_id.user_id..'/Nzlne'},{text = '{ لا }', data = msg.sender_id.user_id..'/noNzlne'},
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -12554,11 +12554,11 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
-return send(msg_chat_id,msg_id,"[MAS](https://t.me/LEDARQ )","md",true, false, false, true, reply_markup)
+return send(msg_chat_id,msg_id,"[MAS](https://t.me/source_maas )","md",true, false, false, true, reply_markup)
 end
 if text == "صورتي" then
 if Redis:get(MisTiri.."myphoto"..msg_chat_id) == "off" then
@@ -12709,7 +12709,7 @@ print(Abs)
 local Text ='*✠︙تم اختيار الاغنيه لك*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •',url="t.me/LEDARQ "}},
+{{text = '•SOURCE  MAS •',url="t.me/source_maas "}},
 }
 local MsgId = msg.id/2097152/0.5
 local MSGID = 0
@@ -15498,7 +15498,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -17087,7 +17087,7 @@ if text == ("الردود") then
   return send(msg_chat_id,msg_id,'\n*✠︙هاذا الامر يخص  '..Controller_Num(6)..' * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/LEDARQ '}, },}}
+  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/source_maas '}, },}}
   return send(msg.chat_id,msg.id,'*\n✠︙عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   local list = Redis:smembers(MisTiri.."List:Manager"..msg_chat_id.."")
@@ -17403,7 +17403,7 @@ if text == "حذف قسم" then
   return send(msg_chat_id,msg_id,'\n*✠︙هاذا الامر يخص  '..Controller_Num(7)..' * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/LEDARQ '}, },}}
+  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/source_maas '}, },}}
   return send(msg.chat_id,msg.id,'*\n✠︙عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   local reply_markup = bot.replyMarkup{
@@ -17433,7 +17433,7 @@ if text == "حذف قسم" then
   return send(msg_chat_id,msg_id,'\n*✠︙هاذا الامر يخص  '..Controller_Num(6)..' * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/LEDARQ '}, },}}
+  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/source_maas '}, },}}
   return send(msg.chat_id,msg.id,'*\n✠︙عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   local list = Redis:smembers(MisTiri.."List:Sections:inline")
@@ -17551,7 +17551,7 @@ if text == "حذف قسم" then
   return send(msg_chat_id,msg_id,'\n*✠︙هاذا الامر يخص  '..Controller_Num(6)..' * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/LEDARQ '}, },}}
+  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/source_maas '}, },}}
   return send(msg.chat_id,msg.id,'*\n✠︙عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   local list = Redis:smembers(MisTiri.."List:Sections:inline")
@@ -17676,7 +17676,7 @@ end
 -- اشتم وحفل 
 if text == "اشتمه" then 
   local Message_Reply = bot.getMessage(msg.chat_id, msg.reply_to_message_id)
-  if tonumber(Message_Reply.sender_id.user_id) ==  1696907808  or tonumber(Message_Reply.sender_id.user_id) == 1696907808 then
+  if tonumber(Message_Reply.sender_id.user_id) ==  2069112486  or tonumber(Message_Reply.sender_id.user_id) == 2069112486 then
   return send(msg_chat_id,msg_id,"ياخي كتفمك عاوزني اشتم مطور السورس ؟؟","md",true) 
   end
   if tonumber(Message_Reply.sender_id.user_id) == tonumber(MisTiri) then
@@ -17692,7 +17692,7 @@ if text == "اشتمه" then
   end
   if text == "حفل عليه" then 
     local Message_Reply = bot.getMessage(msg.chat_id, msg.reply_to_message_id)
-    if tonumber(Message_Reply.sender_id.user_id) ==  1696907808  or tonumber(Message_Reply.sender_id.user_id) == 1696907808 then
+    if tonumber(Message_Reply.sender_id.user_id) ==  2069112486  or tonumber(Message_Reply.sender_id.user_id) == 2069112486 then
     return send(msg_chat_id,msg_id,"ياخي كتفمك عاوزني احفل ع مطور السورس ؟؟","md",true) 
     end
     if tonumber(Message_Reply.sender_id.user_id) == tonumber(MisTiri) then
@@ -17839,7 +17839,7 @@ if text == ("الرتب المضافه") then
   return send(msg_chat_id,msg_id,'\n*✠︙هاذا الامر يخص  '..Controller_Num(1)..' * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/LEDARQ '}, },}}
+  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/source_maas '}, },}}
   return send(msg.chat_id,msg.id,'*\n✠︙عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
 local rtb_list = Redis:smembers(MisTiri.."rowtab:")
@@ -17865,7 +17865,7 @@ if text == ("مسح رتبه") then
   return send(msg_chat_id,msg_id,'\n*✠︙هاذا الامر يخص  '..Controller_Num(1)..' * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/LEDARQ '}, },}}
+  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/source_maas '}, },}}
   return send(msg.chat_id,msg.id,'*\n✠︙عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
 Redis:set(MisTiri.."del:rtba"..msg.sender_id.user_id..":"..msg_chat_id, true)
@@ -17903,7 +17903,7 @@ if text == ("اضف رتبه") then
   return send(msg_chat_id,msg_id,'\n*✠︙هاذا الامر يخص  '..Controller_Num(1)..' * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/LEDARQ '}, },}}
+  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/source_maas '}, },}}
   return send(msg.chat_id,msg.id,'*\n✠︙عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   Redis:set(MisTiri.."Set:rtba"..msg.sender_id.user_id..":"..msg_chat_id, true)
@@ -19778,31 +19778,31 @@ end
 end
 ---
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس'  then
-local escanor = bot.getUser(1696907808).first_name
-local mistiri = bot.getUser( 1696907808 ).first_name
+local escanor = bot.getUser(2069112486).first_name
+local mistiri = bot.getUser( 2069112486 ).first_name
 local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '• قناة السورس •', url = 't.me/LEDARQ'},
+{text = '• قناة السورس •', url = 't.me/source_maas'},
 },
 {
-{text = '• شروحات السورس •', url = 't.me/lZZIlI'},
+{text = '• شروحات السورس •', url = 't.me/iiiyy_p'},
 },
 {
-{text = '• مطور السورس •', url = 't.me/L_U_2'},
+{text = '• مطور السورس •', url = 't.me/QQWGT'},
 },
 {
-{text = '• مبرمج السورس •', url = 't.me/L_U_2'},
+{text = '• مبرمج السورس •', url = 't.me/QQWGT'},
 },
 {
-{text = '• شراء بوت •', url = 't.me/L_U_2'},
+{text = '• شراء بوت •', url = 't.me/QQWGT'},
 },
 }
 }
 return bot.sendPhoto(msg_chat_id,msg_id,"./logo.jpg",[[
 Welcome To Source
-✠︙[ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ sᴏᴜʀᴄᴇ ams](t.me/LEDARQ ) .
+✠︙[ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ sᴏᴜʀᴄᴇ ams](t.me/source_maas ) .
 ]],"md", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup)
 elseif text == 'الاوامر' then
 if not msg.Admin then
@@ -19838,7 +19838,7 @@ data = {
 {text = '{ القفل / الفتح }', data = msg.sender_id.user_id..'/NoNextSeting'}, {text = '{ التعطيل / التفعيل }', data = msg.sender_id.user_id..'/listallAddorrem'}, 
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -19870,7 +19870,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -19981,7 +19981,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -20014,7 +20014,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -20064,7 +20064,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -20143,7 +20143,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -20218,7 +20218,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -20264,7 +20264,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -20295,7 +20295,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -20355,7 +20355,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -21361,7 +21361,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url="t.me/LEDARQ "},
+{text = '•SOURCE  MAS •', url="t.me/source_maas "},
 },
 }
 }
@@ -21420,7 +21420,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url="t.me/LEDARQ "},
+{text = '•SOURCE  MAS •', url="t.me/source_maas "},
 },
 }
 }
@@ -22349,7 +22349,7 @@ Redis:set(msg.sender_id.user_id.."first_name:", F_Name)
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url="t.me/LEDARQ "},
+{text = '•SOURCE  MAS •', url="t.me/source_maas "},
 },
 }
 }
@@ -22836,7 +22836,7 @@ bot.sendText(msg.chat_id,msg.id, "⇜ انت لا تمتلك حساب بنكي "
 end
 end
 if text == "توب" or text == "التوب" then
-local toptop = "⇜ اهلين فيك في قوائم التوب\nللمزيد من التفاصيل - [@LEDARQ ]\n✦"
+local toptop = "⇜ اهلين فيك في قوائم التوب\nللمزيد من التفاصيل - [@source_maas ]\n✦"
 local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
@@ -22844,7 +22844,7 @@ data = {
 {text = 'الزرف', data = msg.sender_id.user_id..'/topzrf'},{text = 'الفلوس', data = msg.sender_id.user_id..'/topmon'},
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url="t.me/LEDARQ "},
+{text = '•SOURCE  MAS •', url="t.me/source_maas "},
 },
 }
 }
@@ -23960,7 +23960,7 @@ return send(msg_chat_id,msg_id,[[*
 end
 
 if text == 'مطور السورس' or text == 'المطور السورس' or text == 'مطور سورس' then
-local UserInfo = bot.getUser( 1696907808 ) 
+local UserInfo = bot.getUser( 2069112486 ) 
 local photo = bot.getUserProfilePhotos(UserInfo.id)
 if photo.total_count > 0 then
 local reply_markup = bot.replyMarkup{type = 'inline',data = {
@@ -23969,11 +23969,11 @@ local reply_markup = bot.replyMarkup{type = 'inline',data = {
     },
   }
   }
-return bot.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id, getbio( 1696907808 ).."\n• — — — — — — — — — •\n"  , "html", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
+return bot.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id, getbio( 2069112486 ).."\n• — — — — — — — — — •\n"  , "html", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
 end
 end
 if text == 'المبرمج' or text == 'مبرمج السورس' or text == 'محدث السورس' then
-local UserInfo = bot.getUser(1696907808) 
+local UserInfo = bot.getUser(2069112486) 
 local photo = bot.getUserProfilePhotos(UserInfo.id)
 if photo.total_count > 0 then
 local reply_markup = bot.replyMarkup{type = 'inline',data = {
@@ -23982,7 +23982,7 @@ local reply_markup = bot.replyMarkup{type = 'inline',data = {
     },
   }
   }
-return bot.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id, getbio(1696907808).."\n• — — — — — — — — — •\n"  , "html", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
+return bot.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id, getbio(2069112486).."\n• — — — — — — — — — •\n"  , "html", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
 end
 end
 
@@ -24117,10 +24117,10 @@ data = {
 {text = '⌯ اضفني لمجموعتك .', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = '⌯ لتنصيب بوت .', url = 't.me/LEDARQ /113'},
+{text = '⌯ لتنصيب بوت .', url = 't.me/source_maas /113'},
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -24133,10 +24133,10 @@ data = {
 {text = '⌯ اضفني لمجموعتك .', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = '⌯ لتنصيب بوت .', url = 't.me/LEDARQ /113'},
+{text = '⌯ لتنصيب بوت .', url = 't.me/source_maas /113'},
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -24216,7 +24216,7 @@ data = {
 },
 }
 }
-return send(msg_chat_id,msg_id,' ✠︙ اهلا عزيزي آلمـطـور\n ✠︙ آنت آلمـطـور آلآسـآسـي للبوت\n• — — — — — — — — — •\n ✠︙ تسـتطـيع‌‏ آلتحگم باوامر البوت\n ✠︙ من خلاال الكيبورت خاص بك\n ✠︙ قناة سورس البوت [اضغط هنا](https://t.me/LEDARQ )', 'md', false, false, false, false, reply_markup)
+return send(msg_chat_id,msg_id,' ✠︙ اهلا عزيزي آلمـطـور\n ✠︙ آنت آلمـطـور آلآسـآسـي للبوت\n• — — — — — — — — — •\n ✠︙ تسـتطـيع‌‏ آلتحگم باوامر البوت\n ✠︙ من خلاال الكيبورت خاص بك\n ✠︙ قناة سورس البوت [اضغط هنا](https://t.me/source_maas )', 'md', false, false, false, false, reply_markup)
 end
 end
 if Redis:get(MisTiri.."set:rmz"..msg.sender_id.user_id) then
@@ -24555,7 +24555,7 @@ return false
 end
 
 if text == "محمد" then
-  local UserInfo = bot.getUser( 1696907808 ) 
+  local UserInfo = bot.getUser( 2069112486 ) 
   local photo = bot.getUserProfilePhotos(UserInfo.id)
   local ANUBIS = {
       "معاك الحج انوبيس للسياحه",
@@ -25046,9 +25046,9 @@ print('This is Edit for Bot')
 return false
 end
 File_Bot_Run(Message_Edit,Message_Edit)
-if tonumber(Message_Edit.sender_id.user_id) == 1696907808 then
+if tonumber(Message_Edit.sender_id.user_id) == 2069112486 then
 data.The_Controller = 1
-elseif tonumber(Message_Edit.sender_id.user_id) ==  1696907808  then
+elseif tonumber(Message_Edit.sender_id.user_id) ==  2069112486  then
 data.The_Controller = 1
 elseif The_ControllerAll(Message_Edit.sender_id.user_id) == true then  
 data.The_Controller = 1
@@ -25134,9 +25134,9 @@ Text = bot.base64_decode(data.payload.data)
 IdUser = data.sender_user_id
 ChatId = data.chat_id
 Msg_id = data.message_id
-if tonumber(IdUser) == 1696907808 then
+if tonumber(IdUser) == 2069112486 then
 data.The_Controller = 1
-elseif tonumber(IdUser) ==  1696907808  then
+elseif tonumber(IdUser) ==  2069112486  then
 data.The_Controller = 1
 elseif The_ControllerAll(IdUser) == true then  
 data.The_Controller = 1
@@ -25617,7 +25617,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -25639,14 +25639,14 @@ if Redis:get(MisTiri..'Set:array'..IdUser..':'..ChatId) == 'true1' then
 Redis:del(MisTiri..'Set:array'..IdUser..':'..ChatId)
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •',url='http://t.me/LEDARQ '}},
+{{text = '•SOURCE  MAS •',url='http://t.me/source_maas '}},
 }
 local msg_idd = Msg_id/2097152/0.5
 return https.request("https://api.telegram.org/bot"..Token..'/editMessageText?chat_id='..ChatId..'&text='..URL.escape(" *✠︙تم حفظ الردود بنجاح*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 else
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •',url='http://t.me/LEDARQ '}},
+{{text = '•SOURCE  MAS •',url='http://t.me/source_maas '}},
 }
 return https.request("https://api.telegram.org/bot"..Token..'/editMessageText?chat_id='..ChatId..'&text='..URL.escape(" *✠︙تم تنفيذ الامر سابقا*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -25658,7 +25658,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
     {
-    {text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 'https://t.me/LEDARQ '}, 
+    {text = '•SOURCE  MAS •', url = 'https://t.me/source_maas '}, 
     },
     }
     }
@@ -25713,7 +25713,7 @@ if Text and Text:match('(%d+)/cancelSection') then
     type = 'inline',
     data = {
         {
-        {text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 'https://t.me/LEDARQ '}, 
+        {text = '•SOURCE  MAS •', url = 'https://t.me/source_maas '}, 
         },
         }
         }
@@ -26043,7 +26043,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -26061,7 +26061,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -26127,7 +26127,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -26187,7 +26187,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -26276,7 +26276,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -26361,7 +26361,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -26420,7 +26420,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -26464,7 +26464,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -26520,7 +26520,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -26593,7 +26593,7 @@ data = {
 {text = '{ القفل / الفتح }', data = IdUser..'/NoNextSeting'}, {text = '{ التعطيل / التفعيل }', data = IdUser..'/listallAddorrem'}, 
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -26635,7 +26635,7 @@ data = {
 {text = '{ القفل / الفتح }', data = IdUser..'/NoNextSeting'}, {text = '{ التعطيل / التفعيل }', data = IdUser..'/listallAddorrem'}, 
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -26756,7 +26756,7 @@ data = {
 {text = '{ القفل / الفتح }', data = IdUser..'/NoNextSeting'}, {text = '{ التعطيل / التفعيل }', data = IdUser..'/listallAddorrem'}, 
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -28537,7 +28537,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •',url="t.me/LEDARQ "}, 
+{text = '•SOURCE  MAS •',url="t.me/source_maas "}, 
 },
 }
 }
@@ -28595,7 +28595,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •',url="t.me/LEDARQ "}, 
+{text = '•SOURCE  MAS •',url="t.me/source_maas "}, 
 },
 }
 }
