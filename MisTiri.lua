@@ -19784,7 +19784,7 @@ Welcome To  ▹ 𝚂𝙾𝚄𝚁𝙲𝙴
  ▹￤[  SOURCE  MAS  .](https://t.me/source_maas) .
 ]]
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = '▹ قناة السوࢪس ▹', url = "https://t.me/source_maas"}},{{text = '▹ مطور سوࢪس', url = "https://t.me/QQWGT"},{text = '▹ لتنصيب البوت', url = "https://t.me/source_maas/6"}},{{text = '▹ تحديثات السوࢪس ▹', url = "https://t.me/iiiyy_p"}}}
+keyboard.inline_keyboard = {{{text = '▹ قناة السوࢪس ▹', url = "https://t.me/source_maas"}},{{text = '▹ مطور سوࢪس', url = "https://t.me/QQWGT"},{text = '▹ لتنصيب البوت', url = "https://t.me/QQWGT"}},{{text = '▹ تحديثات السوࢪس ▹', url = "https://t.me/iiiyy_p"}}}
 local msgg = msg_id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg_chat_id .. "&photo=https://t.me/iiiyy_p/161&caption=".. URL.escape(tt).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) end
 elseif text == 'الاوامر' then
@@ -24100,7 +24100,7 @@ data = {
 {text = '⌯ اضفني لمجموعتك .', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = '⌯ لتنصيب بوت .', url = 't.me/source_maas /113'},
+{text = '⌯ لتنصيب بوت .', url = 't.me/QQWGT'},
 },
 {
 {text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
@@ -24116,7 +24116,7 @@ data = {
 {text = '⌯ اضفني لمجموعتك .', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = '⌯ لتنصيب بوت .', url = 't.me/source_maas /113'},
+{text = '⌯ لتنصيب بوت .', url = 't.me/QQWGT'},
 },
 {
 {text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
