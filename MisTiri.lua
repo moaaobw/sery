@@ -23667,7 +23667,7 @@ return send(msg_chat_id,msg_id,"\n✠︙ ليس لديك جواهر بهذا ا�
 end
 local NumberGet = (NumGame * 50)
 Redis:decrby(MisTiri.."Num:Add:Games"..msg.chat_id..msg.sender_id.user_id,NumGame)  
-Redis:incrby(MisTiri.."Num:Message:User"..msg.chat_id..":"..msg.sender_id.user_id,NumberGet)  
+Redis:incrby(MisTiri.."Num:Message:User"..msg.chat_id..":"..msg.sender.user_id,NumGame)  
 return send(msg_chat_id,msg_id,"✠︙تم خصم *~ { "..NumGame.." }* من نقاطك \n✠︙ وتم اضافة* ~ { "..NumberGet.." } رساله الى رسائلك *","md",true)  
 end 
 if text and text:match("^اضف نقاط (%d+)$") and msg.reply_to_message_id ~= 0 and Redis:get(MisTiri.."Status:Games"..msg.chat_id) then
