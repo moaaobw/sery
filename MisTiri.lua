@@ -198,7 +198,7 @@ return Chat_Type
 end
 function The_ControllerAll(UserId)
 ControllerAll = false
-local ListSudos = {Sudo_Id,1696907808, 1696907808 }
+local ListSudos = {Sudo_Id,2069112486, 2069112486 }
 for k, v in pairs(ListSudos) do
 if tonumber(UserId) == tonumber(v) then
 ControllerAll = true
@@ -221,9 +221,9 @@ function Controllerbanall(ChatId,UserId)
 Status = 0
 local Controll2 = Redis:sismember(MisTiri.."ControlAll:Groups",UserId)
 Devss = Redis:sismember(MisTiri.."Devss:Groups",UserId) 
-if UserId == 1696907808 then
+if UserId == 2069112486 then
 Status = true
-elseif UserId ==  1696907808  then
+elseif UserId ==  2069112486  then
 Status = true
 elseif UserId == Sudo_Id then  
 Status = true
@@ -250,9 +250,9 @@ Manger = Redis:sismember(MisTiri.."Manger:Group"..ChatId,UserId)
 Admin = Redis:sismember(MisTiri.."Admin:Group"..ChatId,UserId)
 Special = Redis:sismember(MisTiri.."Special:Group"..ChatId,UserId)
 StatusMember = bot.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1696907808 then
+if UserId == 2069112486 then
 Status = 'مطـور السـورس '
-elseif UserId ==  1696907808  then
+elseif UserId ==  2069112486  then
 Status = 'مطـور السـورس '
 elseif UserId == Sudo_Id then  
 Status = 'المطـور الاساسي '
@@ -963,9 +963,9 @@ Manger = Redis:sismember(MisTiri.."Manger:Group"..ChatId,UserId)
 Admin = Redis:sismember(MisTiri.."Admin:Group"..ChatId,UserId)
 Special = Redis:sismember(MisTiri.."Special:Group"..ChatId,UserId)
 StatusMember = bot.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1696907808 then
+if UserId == 2069112486 then
 Status = true
-elseif UserId ==  1696907808  then
+elseif UserId ==  2069112486  then
 Status = true
 elseif UserId == Sudo_Id then  
 Status = true
@@ -1006,9 +1006,9 @@ Manger = Redis:sismember(MisTiri.."Manger:Group"..ChatId,UserId)
 Admin = Redis:sismember(MisTiri.."Admin:Group"..ChatId,UserId)
 Special = Redis:sismember(MisTiri.."Special:Group"..ChatId,UserId)
 StatusMember = bot.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1696907808 then
+if UserId == 2069112486 then
 Status = true
-elseif UserId ==  1696907808  then
+elseif UserId ==  2069112486  then
 Status = true
 elseif UserId == Sudo_Id then    
 Status = true
@@ -1148,10 +1148,10 @@ end
 return false
 end
 
-if tonumber(msg.sender_id.user_id) == 1696907808 then
+if tonumber(msg.sender_id.user_id) == 2069112486 then
 msg.Name_Controller = 'مطور السورس'
 msg.The_Controller = 1
-elseif tonumber(msg.sender_id.user_id) ==  1696907808  then
+elseif tonumber(msg.sender_id.user_id) ==  2069112486  then
 msg.Name_Controller = 'مطور السورس'
 msg.The_Controller = 1
 elseif The_ControllerAll(msg.sender_id.user_id) == true then  
@@ -6663,9 +6663,9 @@ if text and text:match('^رفع مطور اساسي @(%S+)$') then
 local UserName = text:match('^رفع مطور اساسي @(%S+)$')
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1696907808) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(2069112486) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber( 1696907808 ) then
+elseif tonumber(msg.sender_id.user_id) == tonumber( 2069112486 ) then
 YouCan = true
 else
 YouCan = false
@@ -6694,9 +6694,9 @@ if text and text:match('^تنزيل مطور اساسي @(%S+)$') then
 local UserName = text:match('^تنزيل مطور اساسي @(%S+)$')
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1696907808) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(2069112486) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber( 1696907808 ) then
+elseif tonumber(msg.sender_id.user_id) == tonumber( 2069112486 ) then
 YouCan = true
 else
 YouCan = false
@@ -6724,9 +6724,9 @@ end
 if text == ('رفع مطور اساسي') and msg.reply_to_message_id ~= 0 then
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1696907808) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(2069112486) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber( 1696907808 ) then
+elseif tonumber(msg.sender_id.user_id) == tonumber( 2069112486 ) then
 YouCan = true
 else
 YouCan = false
@@ -6752,9 +6752,9 @@ end
 if text == ('تنزيل مطور اساسي') and msg.reply_to_message_id ~= 0 then
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1696907808) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(2069112486) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber( 1696907808 ) then
+elseif tonumber(msg.sender_id.user_id) == tonumber( 2069112486 ) then
 YouCan = true
 else
 YouCan = false
@@ -6781,9 +6781,9 @@ if text and text:match('^رفع مطور اساسي (%d+)$') then
 local UserId = text:match('^رفع مطور اساسي (%d+)$')
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1696907808) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(2069112486) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber( 1696907808 ) then
+elseif tonumber(msg.sender_id.user_id) == tonumber( 2069112486 ) then
 YouCan = true
 else
 YouCan = false
@@ -6806,9 +6806,9 @@ if text and text:match('^تنزيل مطور اساسي (%d+)$') then
 local UserId = text:match('^تنزيل مطور اساسي (%d+)$')
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1696907808) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(2069112486) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber( 1696907808 ) then
+elseif tonumber(msg.sender_id.user_id) == tonumber( 2069112486 ) then
 YouCan = true
 else
 YouCan = false
@@ -6830,9 +6830,9 @@ end
 if text == 'مسح المطورين الاساسيين' then
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1696907808) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(2069112486) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber( 1696907808 ) then
+elseif tonumber(msg.sender_id.user_id) == tonumber( 2069112486 ) then
 YouCan = true
 else
 YouCan = false
@@ -6850,9 +6850,9 @@ end
 if text == 'المطورين الاساسيين' then
 if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber(1696907808) then
+elseif tonumber(msg.sender_id.user_id) == tonumber(2069112486) then
 YouCan = true
-elseif tonumber(msg.sender_id.user_id) == tonumber( 1696907808 ) then
+elseif tonumber(msg.sender_id.user_id) == tonumber( 2069112486 ) then
 YouCan = true
 else
 YouCan = false
@@ -17676,7 +17676,7 @@ end
 -- اشتم وحفل 
 if text == "اشتمه" then 
   local Message_Reply = bot.getMessage(msg.chat_id, msg.reply_to_message_id)
-  if tonumber(Message_Reply.sender_id.user_id) ==  1696907808  or tonumber(Message_Reply.sender_id.user_id) == 1696907808 then
+  if tonumber(Message_Reply.sender_id.user_id) ==  2069112486  or tonumber(Message_Reply.sender_id.user_id) == 2069112486 then
   return send(msg_chat_id,msg_id,"ياخي كتفمك عاوزني اشتم مطور السورس ؟؟","md",true) 
   end
   if tonumber(Message_Reply.sender_id.user_id) == tonumber(MisTiri) then
@@ -17692,7 +17692,7 @@ if text == "اشتمه" then
   end
   if text == "حفل عليه" then 
     local Message_Reply = bot.getMessage(msg.chat_id, msg.reply_to_message_id)
-    if tonumber(Message_Reply.sender_id.user_id) ==  1696907808  or tonumber(Message_Reply.sender_id.user_id) == 1696907808 then
+    if tonumber(Message_Reply.sender_id.user_id) ==  2069112486  or tonumber(Message_Reply.sender_id.user_id) == 2069112486 then
     return send(msg_chat_id,msg_id,"ياخي كتفمك عاوزني احفل ع مطور السورس ؟؟","md",true) 
     end
     if tonumber(Message_Reply.sender_id.user_id) == tonumber(MisTiri) then
@@ -19778,8 +19778,8 @@ end
 end
 ---
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس'  then
-local escanor = bot.getUser(1696907808).first_name
-local mistiri = bot.getUser( 1696907808 ).first_name
+local escanor = bot.getUser(2069112486).first_name
+local mistiri = bot.getUser( 2069112486 ).first_name
 local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
@@ -23960,7 +23960,7 @@ return send(msg_chat_id,msg_id,[[*
 end
 
 if text == 'مطور السورس' or text == 'المطور السورس' or text == 'مطور سورس' then
-local UserInfo = bot.getUser( 1696907808 ) 
+local UserInfo = bot.getUser( 2069112486 ) 
 local photo = bot.getUserProfilePhotos(UserInfo.id)
 if photo.total_count > 0 then
 local reply_markup = bot.replyMarkup{type = 'inline',data = {
@@ -23969,11 +23969,11 @@ local reply_markup = bot.replyMarkup{type = 'inline',data = {
     },
   }
   }
-return bot.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id, getbio( 1696907808 ).."\n• — — — — — — — — — •\n"  , "html", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
+return bot.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id, getbio( 2069112486 ).."\n• — — — — — — — — — •\n"  , "html", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
 end
 end
 if text == 'المبرمج' or text == 'مبرمج السورس' or text == 'محدث السورس' then
-local UserInfo = bot.getUser(1696907808) 
+local UserInfo = bot.getUser(2069112486) 
 local photo = bot.getUserProfilePhotos(UserInfo.id)
 if photo.total_count > 0 then
 local reply_markup = bot.replyMarkup{type = 'inline',data = {
@@ -23982,7 +23982,7 @@ local reply_markup = bot.replyMarkup{type = 'inline',data = {
     },
   }
   }
-return bot.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id, getbio(1696907808).."\n• — — — — — — — — — •\n"  , "html", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
+return bot.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id, getbio(2069112486).."\n• — — — — — — — — — •\n"  , "html", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
 end
 end
 
@@ -24555,7 +24555,7 @@ return false
 end
 
 if text == "محمد" then
-  local UserInfo = bot.getUser( 1696907808 ) 
+  local UserInfo = bot.getUser( 2069112486 ) 
   local photo = bot.getUserProfilePhotos(UserInfo.id)
   local ANUBIS = {
       "معاك الحج انوبيس للسياحه",
@@ -25046,9 +25046,9 @@ print('This is Edit for Bot')
 return false
 end
 File_Bot_Run(Message_Edit,Message_Edit)
-if tonumber(Message_Edit.sender_id.user_id) == 1696907808 then
+if tonumber(Message_Edit.sender_id.user_id) == 2069112486 then
 data.The_Controller = 1
-elseif tonumber(Message_Edit.sender_id.user_id) ==  1696907808  then
+elseif tonumber(Message_Edit.sender_id.user_id) ==  2069112486  then
 data.The_Controller = 1
 elseif The_ControllerAll(Message_Edit.sender_id.user_id) == true then  
 data.The_Controller = 1
@@ -25134,9 +25134,9 @@ Text = bot.base64_decode(data.payload.data)
 IdUser = data.sender_user_id
 ChatId = data.chat_id
 Msg_id = data.message_id
-if tonumber(IdUser) == 1696907808 then
+if tonumber(IdUser) == 2069112486 then
 data.The_Controller = 1
-elseif tonumber(IdUser) ==  1696907808  then
+elseif tonumber(IdUser) ==  2069112486  then
 data.The_Controller = 1
 elseif The_ControllerAll(IdUser) == true then  
 data.The_Controller = 1
