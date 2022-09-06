@@ -19781,15 +19781,29 @@ if text == 'السورس' or text == 'سورس' or text == 'يا سورس'  then
 local escanor = bot.getUser(1696907808).first_name
 local mistiri = bot.getUser( 1696907808 ).first_name
 local reply_markup = bot.replyMarkup{
-photo ="https://t.me/osbsjsbsjsbsb/156"
-local tt =[[
-Welcome To  ▹ 𝚂𝙾𝚄𝚁𝙲𝙴
- ▹￤[  SOURCE  MAS  .](https://t.me/source_maas) .
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {{{text = '▹ قناة السوࢪس ▹', url = "https://t.me/source_maas"}},{{text = '▹ مطور سوࢪس', url = "https://t.me/QQWGT"},{text = '▹ لتنصيب البوت', url = "https://t.me/source_maas/6"}},{{text = '▹ تحديثات السوࢪس ▹', url = "https://t.me/iiiyy_p"}}}
-local msgg = msg_id/2097152/0.5
-https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg_chat_id .. "&photo=https://t.me/source_maas&caption=".. URL.escape(tt).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))}} end
+type = 'inline',
+data = {
+{
+{text = '• قناة السورس •', url = 't.me/source_maas'},
+},
+{
+{text = '• شروحات السورس •', url = 't.me/zxcv11233'},
+},
+{
+{text = '• مطور السورس •', url = 't.me/QQWGT'},
+},
+{
+{text = '• مبرمج السورس •', url = 't.me/QQWGT'},
+},
+{
+{text = '• شراء بوت •', url = 't.me/QQWGT'},
+},
+}
+}
+return bot.sendPhoto(msg_chat_id,msg_id,"./logo.jpg",[[
+Welcome To Source
+✠︙[ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ sᴏᴜʀᴄᴇ mas](t.me/source_maas ) .
+]],"md", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup)
 elseif text == 'الاوامر' then
 if not msg.Admin then
 return send(msg_chat_id,msg_id,'\n*✠︙هذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
