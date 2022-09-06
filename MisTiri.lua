@@ -1766,7 +1766,7 @@ for k,v in pairs(msg.content.member_user_ids) do
 if tonumber(v) == tonumber(MisTiri) then
 local idephoto = Redis:get(MisTiri..':WELCOME_BOT')
 if idephoto then
-local Bot_Name = (Redis:get(MisTiri.."Name:Bot") or "دايموند")
+local Bot_Name = (Redis:get(MisTiri.."Name:Bot") or "ماس")
 return bot.sendPhoto(msg.chat_id, msg.id, idephoto,
 '\n*✠︙اهلا انآ بوت اسمي '..Bot_Name..''..
 '\n✠︙ آختصـآصـي حمـآيهہ‌‏ آلمـجمـوعآت'..
@@ -3839,7 +3839,7 @@ end
 return send(msg_chat_id,msg_id,'✠︙تم استرجاع {'..X..'} كروب \n✠︙ واسترجاع {'..Y..'} مشترك في البوت')
 end
 end
-if text == 'رفع نسخه  دايموند ' and msg.reply_to_message_id ~= 0 then
+if text == 'رفع نسخه  ماس ' and msg.reply_to_message_id ~= 0 then
 if not msg.Asasy then 
 return send(msg_chat_id,msg_id,'\n*✠︙هذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
@@ -3874,7 +3874,7 @@ for k,idASAS in pairs(v.ASAS) do
 Redis:sadd(MisTiri.."SuperCreator:Group"..idg,idASAS)
 end;end
 end
-return send(msg_chat_id,msg_id,'✠︙تم استرجاع المجموعات من نسخه  دايموند ')
+return send(msg_chat_id,msg_id,'✠︙تم استرجاع المجموعات من نسخه  ماس ')
 else
 return send(msg_chat_id,msg_id,'✠︙الملف لا يدعم هذا البوت')
 end
@@ -4809,7 +4809,7 @@ if Redis:get(MisTiri.."kit_defullt:") ~= "false" then
 "اخر اغنية سمعتها ?", 
 "تكلم عن نفسك", 
 "ليه انت مش سالك", 
-"ما هيا عيوب سورس دايموند؟ ", 
+"ما هيا عيوب سورس ماس؟ ", 
 "اخر كتاب قرآته", 
 "روايتك المفضله ?", 
 "اخر اكله اكلتها", 
@@ -4825,13 +4825,13 @@ if Redis:get(MisTiri.."kit_defullt:") ~= "false" then
 " ما السيء في هذه الحياة ؟ ", 
 "أجمل شيء حصل معك خلال هذا الاسبوع ؟ ", 
 "سؤال ينرفزك ؟ ", 
-" هل يعجبك سورس دايموند؟ ", 
+" هل يعجبك سورس ماس؟ ", 
 " اكثر ممثل تحبه ؟ ", 
 "قد تخيلت شي في بالك وصار ؟ ", 
 "شيء عندك اهم من الناس ؟ ", 
 "تفضّل النقاش الطويل او تحب الاختصار ؟ ", 
 "وش أخر شي ضيعته؟ ", 
-"اي رايك في سورس دايموند؟ ", 
+"اي رايك في سورس ماس؟ ", 
 "كم مره حبيت؟ ", 
 " اكثر المتابعين عندك باي برنامج؟", 
 " نسبه الندم عندك للي وثقت فيهم ؟", 
@@ -6091,7 +6091,7 @@ Abs = math.random(2,140);
 local Text ='*✯‍︙تم اختيار الشعر لك فقط*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •',url="t.me/LEDARQ "}},
+{{text = '•SOURCE  MAS •',url="t.me/source_maas "}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/L1BBBL/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -10853,7 +10853,7 @@ Abs = math.random(2,140);
 local Text ='*✠︙تم اختيار الاغنيه لك*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •',url="t.me/LEDARQ "}},
+{{text = '•SOURCE  MAS •',url="t.me/source_maas "}},
 }
 local MsgId = msg.id/2097152/0.5
 local MSGID = msg.id/2097152/0.5
@@ -12275,7 +12275,7 @@ send(msg_chat_id,msg_id,'✠︙لا يوجد مقيدين ',"md",true)
 end
 end
 
-local Bot_Name = (Redis:get(MisTiri.."Name:Bot") or "دايموند")
+local Bot_Name = (Redis:get(MisTiri.."Name:Bot") or "ماس")
 if text and text:match(Bot_Name.." غادر$") then  
 if not msg.Asasy then 
 return send(msg_chat_id,msg_id,'\n*✠︙هذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
@@ -12520,7 +12520,7 @@ data = {
 {text = '{ نعم }', data = msg.sender_id.user_id..'/Nzlne'},{text = '{ لا }', data = msg.sender_id.user_id..'/noNzlne'},
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -12554,11 +12554,11 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
-return send(msg_chat_id,msg_id,"[MAS](https://t.me/LEDARQ )","md",true, false, false, true, reply_markup)
+return send(msg_chat_id,msg_id,"[MAS](https://t.me/source_maas )","md",true, false, false, true, reply_markup)
 end
 if text == "صورتي" then
 if Redis:get(MisTiri.."myphoto"..msg_chat_id) == "off" then
@@ -12709,7 +12709,7 @@ print(Abs)
 local Text ='*✠︙تم اختيار الاغنيه لك*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •',url="t.me/LEDARQ "}},
+{{text = '•SOURCE  MAS •',url="t.me/source_maas "}},
 }
 local MsgId = msg.id/2097152/0.5
 local MSGID = 0
@@ -15498,7 +15498,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -17087,7 +17087,7 @@ if text == ("الردود") then
   return send(msg_chat_id,msg_id,'\n*✠︙هاذا الامر يخص  '..Controller_Num(6)..' * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/LEDARQ '}, },}}
+  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/source_maas '}, },}}
   return send(msg.chat_id,msg.id,'*\n✠︙عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   local list = Redis:smembers(MisTiri.."List:Manager"..msg_chat_id.."")
@@ -17403,7 +17403,7 @@ if text == "حذف قسم" then
   return send(msg_chat_id,msg_id,'\n*✠︙هاذا الامر يخص  '..Controller_Num(7)..' * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/LEDARQ '}, },}}
+  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/source_maas '}, },}}
   return send(msg.chat_id,msg.id,'*\n✠︙عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   local reply_markup = bot.replyMarkup{
@@ -17433,7 +17433,7 @@ if text == "حذف قسم" then
   return send(msg_chat_id,msg_id,'\n*✠︙هاذا الامر يخص  '..Controller_Num(6)..' * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/LEDARQ '}, },}}
+  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/source_maas '}, },}}
   return send(msg.chat_id,msg.id,'*\n✠︙عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   local list = Redis:smembers(MisTiri.."List:Sections:inline")
@@ -17551,7 +17551,7 @@ if text == "حذف قسم" then
   return send(msg_chat_id,msg_id,'\n*✠︙هاذا الامر يخص  '..Controller_Num(6)..' * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/LEDARQ '}, },}}
+  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/source_maas '}, },}}
   return send(msg.chat_id,msg.id,'*\n✠︙عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   local list = Redis:smembers(MisTiri.."List:Sections:inline")
@@ -17839,7 +17839,7 @@ if text == ("الرتب المضافه") then
   return send(msg_chat_id,msg_id,'\n*✠︙هاذا الامر يخص  '..Controller_Num(1)..' * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/LEDARQ '}, },}}
+  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/source_maas '}, },}}
   return send(msg.chat_id,msg.id,'*\n✠︙عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
 local rtb_list = Redis:smembers(MisTiri.."rowtab:")
@@ -17865,7 +17865,7 @@ if text == ("مسح رتبه") then
   return send(msg_chat_id,msg_id,'\n*✠︙هاذا الامر يخص  '..Controller_Num(1)..' * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/LEDARQ '}, },}}
+  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/source_maas '}, },}}
   return send(msg.chat_id,msg.id,'*\n✠︙عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
 Redis:set(MisTiri.."del:rtba"..msg.sender_id.user_id..":"..msg_chat_id, true)
@@ -17903,7 +17903,7 @@ if text == ("اضف رتبه") then
   return send(msg_chat_id,msg_id,'\n*✠︙هاذا الامر يخص  '..Controller_Num(1)..' * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/LEDARQ '}, },}}
+  local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/source_maas '}, },}}
   return send(msg.chat_id,msg.id,'*\n✠︙عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   Redis:set(MisTiri.."Set:rtba"..msg.sender_id.user_id..":"..msg_chat_id, true)
@@ -19781,29 +19781,15 @@ if text == 'السورس' or text == 'سورس' or text == 'يا سورس'  then
 local escanor = bot.getUser(1696907808).first_name
 local mistiri = bot.getUser( 1696907808 ).first_name
 local reply_markup = bot.replyMarkup{
-type = 'inline',
-data = {
-{
-{text = '• قناة السورس •', url = 't.me/LEDARQ'},
-},
-{
-{text = '• شروحات السورس •', url = 't.me/lZZIlI'},
-},
-{
-{text = '• مطور السورس •', url = 't.me/L_U_2'},
-},
-{
-{text = '• مبرمج السورس •', url = 't.me/L_U_2'},
-},
-{
-{text = '• شراء بوت •', url = 't.me/L_U_2'},
-},
-}
-}
-return bot.sendPhoto(msg_chat_id,msg_id,"./logo.jpg",[[
-Welcome To Source
-✠︙[ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ sᴏᴜʀᴄᴇ ams](t.me/LEDARQ ) .
-]],"md", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup)
+photo ="https://t.me/osbsjsbsjsbsb/156"
+local tt =[[
+Welcome To  ▹ 𝚂𝙾𝚄𝚁𝙲𝙴
+ ▹￤[  SOURCE  MAS  .](https://t.me/source_maas) .
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {{{text = '▹ قناة السوࢪس ▹', url = "https://t.me/source_maas"}},{{text = '▹ مطور سوࢪس', url = "https://t.me/QQWGT"},{text = '▹ لتنصيب البوت', url = "https://t.me/source_maas/6"}},{{text = '▹ تحديثات السوࢪس ▹', url = "https://t.me/iiiyy_p"}}}
+local msgg = msg_id/2097152/0.5
+https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg_chat_id .. "&photo=https://t.me/source_maas&caption=".. URL.escape(tt).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))}} end
 elseif text == 'الاوامر' then
 if not msg.Admin then
 return send(msg_chat_id,msg_id,'\n*✠︙هذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
@@ -19838,7 +19824,7 @@ data = {
 {text = '{ القفل / الفتح }', data = msg.sender_id.user_id..'/NoNextSeting'}, {text = '{ التعطيل / التفعيل }', data = msg.sender_id.user_id..'/listallAddorrem'}, 
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -19870,7 +19856,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -19917,7 +19903,7 @@ local TextHelp = [[*
 ✠︙تفعيل تعطيل جلب النسخه التلقائيه
 ✠︙جلب نسخه احتياطيه
 ✠︙رفع النسخه الاحتياطيه بالرد
-✠︙رفع نسخه  دايموند  بالرد
+✠︙رفع نسخه  ماس  بالرد
 ✠︙جلب نسخه الردود 
 ✠︙رفع نسخه الردود بالرد
 ✠︙معلومات التنصيب
@@ -19981,7 +19967,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -20014,7 +20000,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -20064,7 +20050,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -20143,7 +20129,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -20218,7 +20204,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -20264,7 +20250,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -20295,7 +20281,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -20326,11 +20312,11 @@ local TextHelp = [[*
 ✠︙اوامر الترفيه 
 • — — — — — — — — — •
 ✠︙زخرفه + النص
-✠︙مثال زخرفه دايموند
+✠︙مثال زخرفه ماس
 ✠︙احسب + عمرك
 ✠︙مثال احسب 2001/8/5
 ✠︙معني + الاسم 
-✠︙مثال معني دايموند
+✠︙مثال معني ماس
 • — — — — — — — — — •
 ✠︙نسبه الحب/ الكره
 ✠︙نسبه الرجوله/ الانوثه 
@@ -20355,7 +20341,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -20433,8 +20419,8 @@ end
 Redis:del(MisTiri.."Name:Bot") 
 return send(msg_chat_id,msg_id,"✠︙تم مسح اسم البوت ","md",true)   
 end
-if text == (Redis:get(MisTiri.."Name:Bot") or "دايموند") then
-local NamesBot = (Redis:get(MisTiri.."Name:Bot") or "دايموند")
+if text == (Redis:get(MisTiri.."Name:Bot") or "ماس") then
+local NamesBot = (Redis:get(MisTiri.."Name:Bot") or "ماس")
 local NameBots = {
 "قلب "..NamesBot.. "",
 "قلبه ودقاته وكل حياته",
@@ -20445,7 +20431,7 @@ local NameBots = {
 return send(msg_chat_id,msg_id, NameBots[math.random(#NameBots)],"md",true)  
 end
 if text == "بوت" then
-local NamesBot = (Redis:get(MisTiri.."Name:Bot") or "دايموند")
+local NamesBot = (Redis:get(MisTiri.."Name:Bot") or "ماس")
 if msg.Asasy then 
 local su = {
 "نعم يبرنس",
@@ -20659,7 +20645,7 @@ Redis:set("boballban"..creditcc,text)
 Redis:set("boballid"..creditcc,banid)
 Redis:sadd("booob",msg.sender_id.user_id)
 Redis:del("booobb" .. msg.chat_id .. ":" .. msg.sender_id.user_id) 
-bot.sendText(msg.chat_id,msg.id, "\n• وعملنالك لك حساب في بنك فلاش 🏦\n• وشحنالك 50 جنيه 💵 هدية\n\n⇜ رقم حسابك ↢ ( `"..creditcc.."` )\n⇜ نوع البطاقة ↢ ( بنك الرشيد 💳 )\n⇜ فلوسك ↢ ( 50 جنيه 💵 )  ","md",true)  
+bot.sendText(msg.chat_id,msg.id, "\n• وعملنالك لك حساب في بنك فلاش 🏦\n• وشحنالك 50 دولار 💵 هدية\n\n⇜ رقم حسابك ↢ ( `"..creditcc.."` )\n⇜ نوع البطاقة ↢ ( بنك الرشيد 💳 )\n⇜ فلوسك ↢ ( 50 دولار 💵 )  ","md",true)  
 end 
 if text == "بنك الرافدين" then
 local ban = bot.getUser(msg.sender_id.user_id)
@@ -20680,7 +20666,7 @@ Redis:set("boballban"..creditvi,text)
 Redis:set("boballid"..creditvi,banid)
 Redis:sadd("booob",msg.sender_id.user_id)
 Redis:del("booobb" .. msg.chat_id .. ":" .. msg.sender_id.user_id) 
-bot.sendText(msg.chat_id,msg.id, "\n• وعملنالك لك حساب في بنك فلاش 🏦\n• وشحنالك 50 جنيه 💵 هدية\n\n⇜ رقم حسابك ↢ ( `"..creditvi.."` )\n⇜ نوع البطاقة ↢ ( بنك الرافدين 💳 )\n⇜ فلوسك ↢ ( 50 جنيه 💵 )  ","md",true)   
+bot.sendText(msg.chat_id,msg.id, "\n• وعملنالك لك حساب في بنك فلاش 🏦\n• وشحنالك 50 دولار 💵 هدية\n\n⇜ رقم حسابك ↢ ( `"..creditvi.."` )\n⇜ نوع البطاقة ↢ ( بنك الرافدين 💳 )\n⇜ فلوسك ↢ ( 50 دولار 💵 )  ","md",true)   
 end 
 if text == "بنك الدولي" then
 local ban = bot.getUser(msg.sender_id.user_id)
@@ -20701,7 +20687,7 @@ Redis:set("boballban"..creditex,text)
 Redis:set("boballid"..creditex,banid)
 Redis:sadd("booob",msg.sender_id.user_id)
 Redis:del("booobb" .. msg.chat_id .. ":" .. msg.sender_id.user_id) 
-bot.sendText(msg.chat_id,msg.id, "\n• وعملنالك لك حساب في بنك فلاش 🏦\n• وشحنالك 50 جنيه 💵 هدية\n\n⇜ رقم حسابك ↢ ( `"..creditex.."` )\n⇜ نوع البطاقة ↢ ( بنك الدولي💳 )\n⇜ فلوسك ↢ ( 50 جنيه 💵 )  ","md",true)   
+bot.sendText(msg.chat_id,msg.id, "\n• وعملنالك لك حساب في بنك فلاش 🏦\n• وشحنالك 50 دولار 💵 هدية\n\n⇜ رقم حسابك ↢ ( `"..creditex.."` )\n⇜ نوع البطاقة ↢ ( بنك الدولي💳 )\n⇜ فلوسك ↢ ( 50 دولار 💵 )  ","md",true)   
 end 
 end
 if text == 'مسح حساب بنكي' or text == 'مسح حساب البنكي' or text =='مسح الحساب بنكي' or text =='مسح الحساب البنكي' or text == "مسح حسابي البنكي" or text == "مسح حسابي بنكي" or text == "مسح حسابي" then
@@ -20850,7 +20836,7 @@ if tonumber(ballancee) < 1 then
 return bot.sendText(msg.chat_id,msg.id, "⇜ انت لا تمتلك فلوس ارسل الالعاب وابدأ بجمع الفلوس \n✦","md",true)
 end
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id, "⇜ فلوسك `"..convert_mony.."` جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ فلوسك `"..convert_mony.."` دولار 💵","md",true)
 else
 bot.sendText(msg.chat_id,msg.id, "⇜ انت لا تمتلك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
 end
@@ -20868,7 +20854,7 @@ end
 if Redis:sismember("booob",Remsg.sender_id.user_id) then
 ballanceed = Redis:get("boob"..Remsg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballanceed)
-bot.sendText(msg.chat_id,msg.id, "⇜ فلوسه `"..convert_mony.."` جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ فلوسه `"..convert_mony.."` دولار 💵","md",true)
 else
 bot.sendText(msg.chat_id,msg.id, "⇜ لا يمتلك حساب بنكي ","md",true)
 end
@@ -20889,7 +20875,7 @@ uuuu = Redis:get("bbobb"..msg.sender_id.user_id)
 pppp = Redis:get("rrfff"..msg.sender_id.user_id) or 0
 ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id, "⇜ الاسم ↢ "..news.."\n⇜ الحساب ↢ `"..cccc.."`\n⇜ بنك ↢ ( فلاش )\n⇜ نوع ↢ ( "..uuuu.." )\n⇜ الرصيد ↢ ( "..convert_mony.." جنيه 💵 )\n⇜ الزرف ( "..pppp.." جنيه 💵 )\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ الاسم ↢ "..news.."\n⇜ الحساب ↢ `"..cccc.."`\n⇜ بنك ↢ ( فلاش )\n⇜ نوع ↢ ( "..uuuu.." )\n⇜ الرصيد ↢ ( "..convert_mony.." دولار 💵 )\n⇜ الزرف ( "..pppp.." دولار 💵 )\n✦","md",true)
 else
 bot.sendText(msg.chat_id,msg.id, "⇜ انت لا تمتلك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
 end
@@ -20927,7 +20913,7 @@ Redis:del("roog1"..Remsg.sender_id.user_id)
 Redis:del("rooga1"..Remsg.sender_id.user_id)
 Redis:del("rahr1"..Remsg.sender_id.user_id)
 Redis:del("rahrr1"..Remsg.sender_id.user_id)
-bot.sendText(msg.chat_id,msg.id, "⇜ الاسم ↢ "..news.."\n⇜ الحساب ↢ `"..ccccc.."`\n⇜ بنك ↢ ( فلاش )\n⇜ نوع ↢ ( "..uuuuu.." )\n⇜ الرصيد ↢ ( "..convert_mony.." جنيه 💵 )\n⇜ الزرف ↢ ( "..ppppp.." جنيه 💵 )\n⇜ مسكين مسحت حسابه \n✦","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ الاسم ↢ "..news.."\n⇜ الحساب ↢ `"..ccccc.."`\n⇜ بنك ↢ ( فلاش )\n⇜ نوع ↢ ( "..uuuuu.." )\n⇜ الرصيد ↢ ( "..convert_mony.." دولار 💵 )\n⇜ الزرف ↢ ( "..ppppp.." دولار 💵 )\n⇜ مسكين مسحت حسابه \n✦","md",true)
 else
 bot.sendText(msg.chat_id,msg.id, "⇜ لا يمتلك حساب بنكي اصلاً ","md",true)
 end
@@ -20955,7 +20941,7 @@ uuuuu = Redis:get("bbobb"..Remsg.sender_id.user_id)
 ppppp = Redis:get("rrfff"..Remsg.sender_id.user_id) or 0
 ballanceed = Redis:get("boob"..Remsg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballanceed)
-bot.sendText(msg.chat_id,msg.id, "⇜ الاسم ↢ "..news.."\n⇜ الحساب ↢ `"..ccccc.."`\n⇜ بنك ↢ ( فلاش )\n⇜ نوع ↢ ( "..uuuuu.." )\n⇜ الرصيد ↢ ( "..convert_mony.." جنيه 💵 )\n⇜ الزرف ↢ ( "..ppppp.." جنيه 💵 )\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ الاسم ↢ "..news.."\n⇜ الحساب ↢ `"..ccccc.."`\n⇜ بنك ↢ ( فلاش )\n⇜ نوع ↢ ( "..uuuuu.." )\n⇜ الرصيد ↢ ( "..convert_mony.." دولار 💵 )\n⇜ الزرف ↢ ( "..ppppp.." دولار 💵 )\n✦","md",true)
 else
 bot.sendText(msg.chat_id,msg.id, "⇜ لا يمتلك حساب بنكي ","md",true)
 end
@@ -20989,7 +20975,7 @@ Redis:del("rahr1"..coniss)
 Redis:del("rahrr1"..coniss)
 Redis:del("numattack"..coniss)
 Redis:srem("rrfffid", coniss)
-bot.sendText(msg.chat_id,msg.id, "⇜ الاسم ↢ "..news.."\n⇜ الحساب ↢ `"..ccccc.."`\n⇜ بنك ↢ ( فلاش )\n⇜ نوع ↢ ( "..uuuuu.." )\n⇜ الرصيد ↢ ( "..convert_mony.." جنيه 💵 )\n⇜ الزرف ↢ ( "..ppppp.." جنيه 💵 )\n⇜ مسكين مسحت حسابه \n✦","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ الاسم ↢ "..news.."\n⇜ الحساب ↢ `"..ccccc.."`\n⇜ بنك ↢ ( فلاش )\n⇜ نوع ↢ ( "..uuuuu.." )\n⇜ الرصيد ↢ ( "..convert_mony.." دولار 💵 )\n⇜ الزرف ↢ ( "..ppppp.." دولار 💵 )\n⇜ مسكين مسحت حسابه \n✦","md",true)
 else
 bot.sendText(msg.chat_id,msg.id, "⇜ لا يمتلك حساب بنكي اصلاً ","md",true)
 end
@@ -21009,7 +20995,7 @@ local convert_mony = string.format("%.0f",ballancee)
 local dfhb = Redis:get("boballbalc"..coniss)
 
 local fsvhh = Redis:get("boballban"..coniss)
-bot.sendText(msg.chat_id,msg.id, "⇜ الاسم ↢ "..yty.."\n⇜ الحساب ↢ `"..coniss.."`\n⇜ بنك ↢ ( فلاش )\n⇜ نوع ↢ ( "..fsvhh.." )\n⇜ الرصيد ↢ ( "..convert_mony.." جنيه 💵 )\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ الاسم ↢ "..yty.."\n⇜ الحساب ↢ `"..coniss.."`\n⇜ بنك ↢ ( فلاش )\n⇜ نوع ↢ ( "..fsvhh.." )\n⇜ الرصيد ↢ ( "..convert_mony.." دولار 💵 )\n✦","md",true)
 else
 bot.sendText(msg.chat_id,msg.id, "⇜ لا يوجده حساب بنكي كذا","md",true)
 end
@@ -21019,7 +21005,7 @@ if text == 'مضاربه' then
 ballanceed = Redis:get("boob"..msg.sender_id.user_id) or 0
 krses = tonumber(Redis:get("kreednum"..msg.sender_id.user_id))
 if Redis:get("kreed"..msg.sender_id.user_id) and tonumber(ballanceed) > 5000000 then
-return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." جنيه 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." دولار 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
 end
 if Redis:ttl("iiooooo" .. msg.sender_id.user_id) >= 60 then
 local time = Redis:ttl("iiooooo" .. msg.sender_id.user_id)
@@ -21032,7 +21018,7 @@ if text and text:match('^مضاربه (.*)$') or text and text:match('^مضار�
 ballanceed = Redis:get("boob"..msg.sender_id.user_id) or 0
 krses = tonumber(Redis:get("kreednum"..msg.sender_id.user_id))
 if Redis:get("kreed"..msg.sender_id.user_id) and tonumber(ballanceed) > 5000000 then
-return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." جنيه 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." دولار 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
 end
 local F_Name = bot.getUser(msg.sender_id.user_id).first_name
 Redis:set(msg.sender_id.user_id.."first_name:", F_Name)
@@ -21045,7 +21031,7 @@ return bot.sendText(msg.chat_id,msg.id,"⇜ لا يمكنك تضارب حالي�
 end
 ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 if tonumber(coniss) < 99 then
-return bot.sendText(msg.chat_id,msg.id, "⇜ الحد الادنى المسموح هو 100 جنيه 💵\n✦","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ الحد الادنى المسموح هو 100 دولار 💵\n✦","md",true)
 end
 if tonumber(ballancee) < tonumber(coniss) then
 return bot.sendText(msg.chat_id,msg.id, "⇜ فلوسك لا تكفي \n✦","md",true)
@@ -21060,7 +21046,7 @@ local convert_mony = string.format("%.0f",ballanceekku)
 local convert_mony1 = string.format("%.0f",ballanceekkku)
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ballanceekkku))
 Redis:setex("iiooooo" .. msg.sender_id.user_id,900, true)
-bot.sendText(msg.chat_id,msg.id, "⇜ مضاربة فاشلة 📉\n⇜ نسبة الخسارة ↢ "..modarbaa.."%\n⇜ المبلغ الذي خسرته ↢ ( "..convert_mony.." جنيه 💵 )\n⇜ فلوسك صارت ↢ ( "..convert_mony1.." جنيه 💵 )\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ مضاربة فاشلة 📉\n⇜ نسبة الخسارة ↢ "..modarbaa.."%\n⇜ المبلغ الذي خسرته ↢ ( "..convert_mony.." دولار 💵 )\n⇜ فلوسك صارت ↢ ( "..convert_mony1.." دولار 💵 )\n✦","md",true)
 elseif Descriptioontt == "2" or Descriptioontt == "4" then
 ballanceekku = coniss / 100 * modarbaa
 ballanceekkku = ballancee + ballanceekku
@@ -21068,7 +21054,7 @@ local convert_mony = string.format("%.0f",ballanceekku)
 local convert_mony1 = string.format("%.0f",ballanceekkku)
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ballanceekkku))
 Redis:setex("iiooooo" .. msg.sender_id.user_id,900, true)
-bot.sendText(msg.chat_id,msg.id, "⇜ مضاربة ناجحة 📈\n⇜ نسبة الربح ↢ "..modarbaa.."%\n⇜ المبلغ الذي ربحته ↢ ( "..convert_mony.." جنيه 💵 )\n⇜ فلوسك صارت ↢ ( "..convert_mony1.." جنيه 💵 )\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ مضاربة ناجحة 📈\n⇜ نسبة الربح ↢ "..modarbaa.."%\n⇜ المبلغ الذي ربحته ↢ ( "..convert_mony.." دولار 💵 )\n⇜ فلوسك صارت ↢ ( "..convert_mony1.." دولار 💵 )\n✦","md",true)
 end
 else
 bot.sendText(msg.chat_id,msg.id, "⇜ انت لا تمتلك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
@@ -21079,7 +21065,7 @@ if text == 'استثمار' then
 ballanceed = Redis:get("boob"..msg.sender_id.user_id) or 0
 krses = tonumber(Redis:get("kreednum"..msg.sender_id.user_id))
 if Redis:get("kreed"..msg.sender_id.user_id) and tonumber(ballanceed) > 5000000 then
-return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." جنيه 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." دولار 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
 end
 if Redis:ttl("iioooo" .. msg.sender_id.user_id) >= 60 then
 local time = Redis:ttl("iioooo" .. msg.sender_id.user_id)
@@ -21092,7 +21078,7 @@ if text and text:match('^استثمار (.*)$') then
 ballanceed = Redis:get("boob"..msg.sender_id.user_id) or 0
 krses = tonumber(Redis:get("kreednum"..msg.sender_id.user_id))
 if Redis:get("kreed"..msg.sender_id.user_id) and tonumber(ballanceed) > 5000000 then
-return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." جنيه 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." دولار 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
 end
 local F_Name = bot.getUser(msg.sender_id.user_id).first_name
 Redis:set(msg.sender_id.user_id.."first_name:", F_Name)
@@ -21105,7 +21091,7 @@ return bot.sendText(msg.chat_id,msg.id,"⇜ لا يمكنك تستثمر حال�
 end
 ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 if tonumber(coniss) < 99 then
-return bot.sendText(msg.chat_id,msg.id, "⇜ الحد الادنى المسموح هو 100 جنيه 💵\n✦","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ الحد الادنى المسموح هو 100 دولار 💵\n✦","md",true)
 end
 if tonumber(ballancee) < tonumber(coniss) then
 return bot.sendText(msg.chat_id,msg.id, "⇜ فلوسك لا تكفي \n✦","md",true)
@@ -21118,7 +21104,7 @@ local convert_mony = string.format("%.0f",ballanceekk)
 local convert_mony1 = string.format("%.0f",ballanceekkk)
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ballanceekkk))
 Redis:setex("iioooo" .. msg.sender_id.user_id,1200, true)
-bot.sendText(msg.chat_id,msg.id, "⇜ استثمار ناجح 💰\n⇜ نسبة الربح ↢ "..hadddd.."%\n⇜ مبلغ الربح ↢ ( "..convert_mony.." جنيه 💵 )\n⇜ فلوسك صارت ↢ ( "..convert_mony1.." جنيه 💵 )\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ استثمار ناجح 💰\n⇜ نسبة الربح ↢ "..hadddd.."%\n⇜ مبلغ الربح ↢ ( "..convert_mony.." دولار 💵 )\n⇜ فلوسك صارت ↢ ( "..convert_mony1.." دولار 💵 )\n✦","md",true)
 else
 local hadddd = math.random(1,9);
 ballanceekk = coniss / 100 * hadddd
@@ -21127,7 +21113,7 @@ local convert_mony = string.format("%.0f",ballanceekk)
 local convert_mony1 = string.format("%.0f",ballanceekkk)
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ballanceekkk))
 Redis:setex("iioooo" .. msg.sender_id.user_id,1200, true)
-bot.sendText(msg.chat_id,msg.id, "⇜ استثمار ناجح 💰\n⇜ نسبة الربح ↢ "..hadddd.."%\n⇜ مبلغ الربح ↢ ( "..convert_mony.." جنيه 💵 )\n⇜ فلوسك صارت ↢ ( "..convert_mony1.." جنيه 💵 )\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ استثمار ناجح 💰\n⇜ نسبة الربح ↢ "..hadddd.."%\n⇜ مبلغ الربح ↢ ( "..convert_mony.." دولار 💵 )\n⇜ فلوسك صارت ↢ ( "..convert_mony1.." دولار 💵 )\n✦","md",true)
 end
 else
 bot.sendText(msg.chat_id,msg.id, "⇜ انت لا تمتلك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
@@ -21138,7 +21124,7 @@ if text == 'حظ' then
 ballanceed = Redis:get("boob"..msg.sender_id.user_id) or 0
 krses = tonumber(Redis:get("kreednum"..msg.sender_id.user_id))
 if Redis:get("kreed"..msg.sender_id.user_id) and tonumber(ballanceed) > 5000000 then
-return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." جنيه 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." دولار 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
 end
 if Redis:ttl("iiooo" .. msg.sender_id.user_id) >= 60 then
 local time = Redis:ttl("iiooo" .. msg.sender_id.user_id)
@@ -21151,7 +21137,7 @@ if text and text:match('^حظ (.*)$') then
 ballanceed = Redis:get("boob"..msg.sender_id.user_id) or 0
 krses = tonumber(Redis:get("kreednum"..msg.sender_id.user_id))
 if Redis:get("kreed"..msg.sender_id.user_id) and tonumber(ballanceed) > 5000000 then
-return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." جنيه 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." دولار 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
 end
 local F_Name = bot.getUser(msg.sender_id.user_id).first_name
 Redis:set(msg.sender_id.user_id.."first_name:", F_Name)
@@ -21174,14 +21160,14 @@ local convert_mony = string.format("%.0f",ballancee)
 local convert_mony1 = string.format("%.0f",ballanceek)
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ballanceek))
 Redis:setex("iiooo" .. msg.sender_id.user_id,900, true)
-bot.sendText(msg.chat_id,msg.id, "⇜ مبروك فزت بالحظ 🎉\n⇜ فلوسك قبل ↢ ( "..convert_mony.." جنيه 💵 )\n⇜ فلوسك حاليا ↢ ( "..convert_mony1.." جنيه 💵 )\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ مبروك فزت بالحظ 🎉\n⇜ فلوسك قبل ↢ ( "..convert_mony.." دولار 💵 )\n⇜ فلوسك حاليا ↢ ( "..convert_mony1.." دولار 💵 )\n✦","md",true)
 else
 local ballanceekk = ballancee - coniss
 local convert_mony = string.format("%.0f",ballancee)
 local convert_mony1 = string.format("%.0f",ballanceekk)
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ballanceekk))
 Redis:setex("iiooo" .. msg.sender_id.user_id,900, true)
-bot.sendText(msg.chat_id,msg.id, "⇜ للاسف خسرت بالحظ 😬\n⇜ فلوسك قبل ↢ ( "..convert_mony.." جنيه 💵 )\n⇜ فلوسك حاليا ↢ ( "..convert_mony1.." جنيه 💵 )\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ للاسف خسرت بالحظ 😬\n⇜ فلوسك قبل ↢ ( "..convert_mony.." دولار 💵 )\n⇜ فلوسك حاليا ↢ ( "..convert_mony1.." دولار 💵 )\n✦","md",true)
 end
 else
 bot.sendText(msg.chat_id,msg.id, "⇜ انت لا تمتلك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
@@ -21196,7 +21182,7 @@ if text and text:match('^تحويل (.*)$') then
 ballanceed = Redis:get("boob"..msg.sender_id.user_id) or 0
 krses = tonumber(Redis:get("kreednum"..msg.sender_id.user_id))
 if Redis:get("kreed"..msg.sender_id.user_id) then
-return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." جنيه 💵 \nقم بسداده بالامر `تسديد القرض` لكي تستطيع التحويل","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." دولار 💵 \nقم بسداده بالامر `تسديد القرض` لكي تستطيع التحويل","md",true)
 end
 local F_Name = bot.getUser(msg.sender_id.user_id).first_name
 Redis:set(msg.sender_id.user_id.."first_name:", F_Name)
@@ -21206,7 +21192,7 @@ if not Redis:sismember("booob",msg.sender_id.user_id) then
 return bot.sendText(msg.chat_id,msg.id, "⇜ انت لا تمتلك حساب بنكي ","md",true)
 end
 if tonumber(coniss) < 100 then
-return bot.sendText(msg.chat_id,msg.id, "⇜ الحد الادنى المسموح به هو 100 جنيه \n✦","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ الحد الادنى المسموح به هو 100 دولار \n✦","md",true)
 end
 ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 if tonumber(ballancee) < 100 then
@@ -21267,8 +21253,8 @@ decdecb = Redis:get("boob"..fsvhhh) or 0
 deccde2 = decdecb + UserNameyy
 Redis:set("boob"..fsvhhh , math.floor(deccde2))
 
-bot.sendText(msg.chat_id,msg.id, "حوالة صادرة من بنك فلاش\n\nالمرسل : "..news.."\nالحساب رقم : `"..cccc.."`\nنوع البطاقة : "..uuuu.."\nالمستلم : "..newss.."\nالحساب رقم : `"..text.."`\nنوع البطاقة : "..fsvhh.."\nخصمت 10% رسوم تحويل\nالمبلغ : "..convert_mony.." جنيه 💵","md",true)
-bot.sendText(fsvhhh,0, "حوالة واردة من بنك فلاش\n\nالمرسل : "..news.."\nالحساب رقم : `"..cccc.."`\nنوع البطاقة : "..uuuu.."\nالمبلغ : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id, "حوالة صادرة من بنك فلاش\n\nالمرسل : "..news.."\nالحساب رقم : `"..cccc.."`\nنوع البطاقة : "..uuuu.."\nالمستلم : "..newss.."\nالحساب رقم : `"..text.."`\nنوع البطاقة : "..fsvhh.."\nخصمت 10% رسوم تحويل\nالمبلغ : "..convert_mony.." دولار 💵","md",true)
+bot.sendText(fsvhhh,0, "حوالة واردة من بنك فلاش\n\nالمرسل : "..news.."\nالحساب رقم : `"..cccc.."`\nنوع البطاقة : "..uuuu.."\nالمبلغ : "..convert_mony.." دولار 💵","md",true)
 Redis:del("trans" .. msg.chat_id .. ":" .. msg.sender_id.user_id) 
 Redis:del("transn" .. msg.sender_id.user_id)
 else
@@ -21361,7 +21347,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url="t.me/LEDARQ "},
+{text = '•SOURCE  MAS •', url="t.me/source_maas "},
 },
 }
 }
@@ -21420,7 +21406,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url="t.me/LEDARQ "},
+{text = '•SOURCE  MAS •', url="t.me/source_maas "},
 },
 }
 }
@@ -21460,7 +21446,7 @@ ballanceed = Redis:get("boob"..msg.sender_id.user_id) or 0
 Redis:del("kreed"..Remsg.sender_id.user_id)
 Redis:del("kreednum"..Remsg.sender_id.user_id)
 local convert_mony = string.format("%.0f",ballanceed)
-bot.sendText(msg.chat_id,msg.id, "⇜ اشعار تسديد قرض عن "..news.."\n\nالقرض : "..krses.." جنيه 💵\nتم اقتطاع المبلغ من فلوسك\nفلوسك حاليا : "..convert_mony.." جنيه 💵 ","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ اشعار تسديد قرض عن "..news.."\n\nالقرض : "..krses.." دولار 💵\nتم اقتطاع المبلغ من فلوسك\nفلوسك حاليا : "..convert_mony.." دولار 💵 ","md",true)
 end
 else
 bot.sendText(msg.chat_id,msg.id, "⇜ لا يمتلك حساب بنكي ","md",true)
@@ -21485,7 +21471,7 @@ ballanceed = Redis:get("boob"..msg.sender_id.user_id) or 0
 Redis:del("kreed"..msg.sender_id.user_id)
 Redis:del("kreednum"..msg.sender_id.user_id)
 local convert_mony = string.format("%.0f",ballanceed)
-bot.sendText(msg.chat_id,msg.id, "⇜ اشعار تسديد قرض\n\nالقرض : "..krses.." جنيه 💵\nتم اقتطاع المبلغ من فلوسك\nفلوسك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ اشعار تسديد قرض\n\nالقرض : "..krses.." دولار 💵\nتم اقتطاع المبلغ من فلوسك\nفلوسك حاليا : "..convert_mony.." دولار 💵","md",true)
 else
 bot.sendText(msg.chat_id,msg.id, "⇜ انت لا تمتلك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
 end
@@ -21496,7 +21482,7 @@ local F_Name = bot.getUser(msg.sender_id.user_id).first_name
 Redis:set(msg.sender_id.user_id.."first_name:", F_Name)
 krses = tonumber(Redis:get("kreednum"..msg.sender_id.user_id))
 if Redis:get("kreed"..msg.sender_id.user_id) then
-return bot.sendText(msg.chat_id,msg.id, "⇜ سحبت قرض قبل بقيمة "..krses.." جنيه 💵","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ سحبت قرض قبل بقيمة "..krses.." دولار 💵","md",true)
 end
 if Redis:sismember("booob",msg.sender_id.user_id) then
 ballanceed = Redis:get("boob"..msg.sender_id.user_id) or 0
@@ -21505,55 +21491,55 @@ kredd = tonumber(ballanceed) + 900000
 Redis:set("boob"..msg.sender_id.user_id,kredd)
 Redis:set("kreednum"..msg.sender_id.user_id,900000)
 Redis:set("kreed"..msg.sender_id.user_id,true)
-bot.sendText(msg.chat_id,msg.id, "⇜ مبروك وهو قرض بقيمة 900000 جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ مبروك وهو قرض بقيمة 900000 دولار 💵","md",true)
 elseif tonumber(ballanceed) < 200000 then
 kredd = tonumber(ballanceed) + 800000
 Redis:set("boob"..msg.sender_id.user_id,kredd)
 Redis:set("kreednum"..msg.sender_id.user_id,800000)
 Redis:set("kreed"..msg.sender_id.user_id,true)
-bot.sendText(msg.chat_id,msg.id, "⇜ مبروك وهو قرض بقيمة 800000 جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ مبروك وهو قرض بقيمة 800000 دولار 💵","md",true)
 elseif tonumber(ballanceed) < 300000 then
 kredd = tonumber(ballanceed) + 700000
 Redis:set("boob"..msg.sender_id.user_id,kredd)
 Redis:set("kreednum"..msg.sender_id.user_id,700000)
 Redis:set("kreed"..msg.sender_id.user_id,true)
-bot.sendText(msg.chat_id,msg.id, "⇜ مبروك وهو قرض بقيمة 700000 جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ مبروك وهو قرض بقيمة 700000 دولار 💵","md",true)
 elseif tonumber(ballanceed) < 400000 then
 kredd = tonumber(ballanceed) + 600000
 Redis:set("boob"..msg.sender_id.user_id,kredd)
 Redis:set("kreednum"..msg.sender_id.user_id,600000)
 Redis:set("kreed"..msg.sender_id.user_id,true)
-bot.sendText(msg.chat_id,msg.id, "⇜ مبروك وهو قرض بقيمة 600000 جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ مبروك وهو قرض بقيمة 600000 دولار 💵","md",true)
 elseif tonumber(ballanceed) < 500000 then
 kredd = tonumber(ballanceed) + 500000
 Redis:set("boob"..msg.sender_id.user_id,kredd)
 Redis:set("kreednum"..msg.sender_id.user_id,500000)
 Redis:set("kreed"..msg.sender_id.user_id,true)
-bot.sendText(msg.chat_id,msg.id, "⇜ مبروك وهو قرض بقيمة 500000 جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ مبروك وهو قرض بقيمة 500000 دولار 💵","md",true)
 elseif tonumber(ballanceed) < 600000 then
 kredd = tonumber(ballanceed) + 400000
 Redis:set("boob"..msg.sender_id.user_id,kredd)
 Redis:set("kreednum"..msg.sender_id.user_id,400000)
 Redis:set("kreed"..msg.sender_id.user_id,true)
-bot.sendText(msg.chat_id,msg.id, "⇜ مبروك وهو قرض بقيمة 400000 جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ مبروك وهو قرض بقيمة 400000 دولار 💵","md",true)
 elseif tonumber(ballanceed) < 700000 then
 kredd = tonumber(ballanceed) + 300000
 Redis:set("boob"..msg.sender_id.user_id,kredd)
 Redis:set("kreednum"..msg.sender_id.user_id,300000)
 Redis:set("kreed"..msg.sender_id.user_id,true)
-bot.sendText(msg.chat_id,msg.id, "⇜ مبروك وهو قرض بقيمة 300000 جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ مبروك وهو قرض بقيمة 300000 دولار 💵","md",true)
 elseif tonumber(ballanceed) < 800000 then
 kredd = tonumber(ballanceed) + 200000
 Redis:set("boob"..msg.sender_id.user_id,kredd)
 Redis:set("kreednum"..msg.sender_id.user_id,200000)
 Redis:set("kreed"..msg.sender_id.user_id,true)
-bot.sendText(msg.chat_id,msg.id, "⇜ مبروك وهو قرض بقيمة 200000 جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ مبروك وهو قرض بقيمة 200000 دولار 💵","md",true)
 elseif tonumber(ballanceed) < 900000 then
 kredd = tonumber(ballanceed) + 100000
 Redis:set("boob"..msg.sender_id.user_id,kredd)
 Redis:set("kreednum"..msg.sender_id.user_id,100000)
 Redis:set("kreed"..msg.sender_id.user_id,true)
-bot.sendText(msg.chat_id,msg.id, "⇜ مبروك وهو قرض بقيمة 100000 جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ مبروك وهو قرض بقيمة 100000 دولار 💵","md",true)
 else
 bot.sendText(msg.chat_id,msg.id, "⇜ فلوسك فوق المليون مايطلعلك قرض","md",true)
 end
@@ -21566,7 +21552,7 @@ if text == 'بخشيش' or text == 'بقشيش' then
 ballanceed = Redis:get("boob"..msg.sender_id.user_id) or 0
 krses = tonumber(Redis:get("kreednum"..msg.sender_id.user_id))
 if Redis:get("kreed"..msg.sender_id.user_id) and tonumber(ballanceed) > 5000000 then
-return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." جنيه 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." دولار 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
 end
 local F_Name = bot.getUser(msg.sender_id.user_id).first_name
 Redis:set(msg.sender_id.user_id.."first_name:", F_Name)
@@ -21580,7 +21566,7 @@ local jjjo = math.random(200,1000);
 ballanceed = Redis:get("boob"..msg.sender_id.user_id) or 0
 bakigcj = ballanceed + jjjo
 Redis:set("boob"..msg.sender_id.user_id , bakigcj)
-bot.sendText(msg.chat_id,msg.id,"⇜ دلعتك اديتك بخشيش "..jjjo.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"⇜ دلعتك اديتك بخشيش "..jjjo.." دولار 💵","md",true)
 Redis:setex("iioo" .. msg.sender_id.user_id,600, true)
 else
 bot.sendText(msg.chat_id,msg.id, "⇜ انت لا تمتلك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
@@ -21591,7 +21577,7 @@ if text == 'زرف' and tonumber(msg.reply_to_message_id) == 0 then
 ballanceed = Redis:get("boob"..msg.sender_id.user_id) or 0
 krses = tonumber(Redis:get("kreednum"..msg.sender_id.user_id))
 if Redis:get("kreed"..msg.sender_id.user_id) and tonumber(ballanceed) > 5000000 then
-return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." جنيه 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." دولار 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
 end
 bot.sendText(msg.chat_id,msg.id, "استعمل الامر كذا :\n\n`زرف` بالرد","md",true)
 end
@@ -21600,7 +21586,7 @@ if text == 'زرف' or text == 'زرفو' or text == 'زرفه' and tonumber(msg
 ballanceed = Redis:get("boob"..msg.sender_id.user_id) or 0
 krses = tonumber(Redis:get("kreednum"..msg.sender_id.user_id))
 if Redis:get("kreed"..msg.sender_id.user_id) and tonumber(ballanceed) > 5000000 then
-return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." جنيه 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." دولار 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
 end
 local F_Name = bot.getUser(msg.sender_id.user_id).first_name
 Redis:set(msg.sender_id.user_id.."first_name:", F_Name)
@@ -21633,7 +21619,7 @@ end
 if Redis:sismember("booob",Remsg.sender_id.user_id) then
 ballanceed = Redis:get("boob"..Remsg.sender_id.user_id) or 0
 if tonumber(ballanceed) < 199 then
-return bot.sendText(msg.chat_id,msg.id, "⇜ لا يمكنك تزرفه فلوسه اقل من 200 جنيه 💵","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ لا يمكنك تزرفه فلوسه اقل من 200 دولار 💵","md",true)
 end
 local hrame = math.floor(math.random() * 200) + 1;
 local hramee = math.floor(math.random() * 5) + 1;
@@ -21649,7 +21635,7 @@ local zoropeo = Redis:get("rrfff"..msg.sender_id.user_id) or 0
 zoroprod = zoropeo + hrame
 Redis:set("rrfff"..msg.sender_id.user_id,zoroprod)
 Redis:sadd("rrfffid",msg.sender_id.user_id)
-bot.sendText(msg.chat_id,msg.id, "⇜ خذ يالحرامي زرفته "..hrame.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ خذ يالحرامي زرفته "..hrame.." دولار 💵\n✦","md",true)
 else
 Redis:setex("polic" .. msg.sender_id.user_id,300, true)
 bot.sendText(msg.chat_id,msg.id, "⇜ مسكتك الشرطة وانتا تزرف 🚔\n✦","md",true)
@@ -21666,7 +21652,7 @@ if text == 'راتب' or text == 'راتبي' then
 ballanceed = Redis:get("boob"..msg.sender_id.user_id) or 0
 krses = tonumber(Redis:get("kreednum"..msg.sender_id.user_id))
 if Redis:get("kreed"..msg.sender_id.user_id) and tonumber(ballanceed) > 5000000 then
-return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." جنيه 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." دولار 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
 end
 local F_Name = bot.getUser(msg.sender_id.user_id).first_name
 Redis:set(msg.sender_id.user_id.."first_name:", F_Name)
@@ -21690,364 +21676,364 @@ local ratpep = ballancee + 3000
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3000 جنيه 💵\nوظيفتك : كابتن كريم 🚙\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3000 دولار 💵\nوظيفتك : كابتن كريم 🚙\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "2" then
 local ratpep = ballancee + 3500
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3500 جنيه 💵\nوظيفتك : شرطي 👮🏻‍♂️\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3500 دولار 💵\nوظيفتك : شرطي 👮🏻‍♂️\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "3" then
 local ratpep = ballancee + 3500
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3500 جنيه 💵\nوظيفتك : بياع حبوب 🍻\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3500 دولار 💵\nوظيفتك : بياع حبوب 🍻\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "4" then
 local ratpep = ballancee + 3000
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3000 جنيه 💵\nوظيفتك : سواق تاكسي 🚕\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3000 دولار 💵\nوظيفتك : سواق تاكسي 🚕\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "5" then
 local ratpep = ballancee + 5000
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 5000 جنيه 💵\nوظيفتك : قاضي 👨\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 5000 دولار 💵\nوظيفتك : قاضي 👨\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "6" then
 local ratpep = ballancee + 2500
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 2500 جنيه 💵\nوظيفتك : نوم 🛌\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 2500 دولار 💵\nوظيفتك : نوم 🛌\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "7" then
 local ratpep = ballancee + 2700
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 2700 جنيه 💵\nوظيفتك : مغني 🎤\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 2700 دولار 💵\nوظيفتك : مغني 🎤\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "8" then
 local ratpep = ballancee + 2900
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 2900 جنيه 💵\nوظيفتك : كوفيره 💆\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 2900 دولار 💵\nوظيفتك : كوفيره 💆\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "9" then
 local ratpep = ballancee + 2500
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 2500 جنيه 💵\nوظيفتك : ربة منزل 🤷\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 2500 دولار 💵\nوظيفتك : ربة منزل 🤷\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "10" then
 local ratpep = ballancee + 2900
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 2900 جنيه 💵\nوظيفتك : مربيه اطفال 💁\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 2900 دولار 💵\nوظيفتك : مربيه اطفال 💁\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "11" then
 local ratpep = ballancee + 3700
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3700 جنيه 💵\nوظيفتك : كهربائي 💡\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3700 دولار 💵\nوظيفتك : كهربائي 💡\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "12" then
 local ratpep = ballancee + 3600
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3600 جنيه 💵\nوظيفتك : نجار ⛏\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3600 دولار 💵\nوظيفتك : نجار ⛏\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "13" then
 local ratpep = ballancee + 2400
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 2400 جنيه 💵\nوظيفتك : متذوق طعام 🍕\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 2400 دولار 💵\nوظيفتك : متذوق طعام 🍕\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "14" then
 local ratpep = ballancee + 3000
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3000 جنيه 💵\nوظيفتك : فلاح 👨\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3000 دولار 💵\nوظيفتك : فلاح 👨\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "15" then
 local ratpep = ballancee + 5000
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 5000 جنيه 💵\nوظيفتك : كاشير بنده 🙋\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 5000 دولار 💵\nوظيفتك : كاشير بنده 🙋\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "16" then
 local ratpep = ballancee + 6000
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 6000 جنيه 💵\nوظيفتك : ممرض 👨\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 6000 دولار 💵\nوظيفتك : ممرض 👨\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "17" then
 local ratpep = ballancee + 3100
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3100 جنيه 💵\nوظيفتك : مهرج 🤹\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3100 دولار 💵\nوظيفتك : مهرج 🤹\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "18" then
 local ratpep = ballancee + 3300
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3300 جنيه 💵\nوظيفتك : عامل توصيل 🚴\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3300 دولار 💵\nوظيفتك : عامل توصيل 🚴\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "19" then
 local ratpep = ballancee + 4800
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 4800 جنيه 💵\nوظيفتك : عسكري 👮\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 4800 دولار 💵\nوظيفتك : عسكري 👮\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "20" then
 local ratpep = ballancee + 6000
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 6000 جنيه 💵\nوظيفتك : مهندس 👨\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 6000 دولار 💵\nوظيفتك : مهندس 👨\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "21" then
 local ratpep = ballancee + 8000
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 8000 جنيه 💵\nوظيفتك : وزير 👨\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 8000 دولار 💵\nوظيفتك : وزير 👨\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "22" then
 local ratpep = ballancee + 5500
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 5500 جنيه 💵\nوظيفتك : محامي ⚖️\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 5500 دولار 💵\nوظيفتك : محامي ⚖️\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "23" then
 local ratpep = ballancee + 5500
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 5500 جنيه 💵\nوظيفتك : تاجر 💵\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 5500 دولار 💵\nوظيفتك : تاجر 💵\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "24" then
 local ratpep = ballancee + 7000
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 7000 جنيه 💵\nوظيفتك : دكتور 👨\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 7000 دولار 💵\nوظيفتك : دكتور 👨\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "25" then
 local ratpep = ballancee + 2600
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 2600 جنيه 💵\nوظيفتك : حفار قبور ⚓\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 2600 دولار 💵\nوظيفتك : حفار قبور ⚓\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "26" then
 local ratpep = ballancee + 3000
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3000 جنيه 💵\nوظيفتك : حلاق ✂\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3000 دولار 💵\nوظيفتك : حلاق ✂\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "27" then
 local ratpep = ballancee + 5000
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 5000 جنيه 💵\nوظيفتك : إمام مسجد 📿\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 5000 دولار 💵\nوظيفتك : إمام مسجد 📿\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "28" then
 local ratpep = ballancee + 3000
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3000 جنيه 💵\nوظيفتك : صياد 🎣\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3000 دولار 💵\nوظيفتك : صياد 🎣\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "29" then
 local ratpep = ballancee + 2300
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 2300 جنيه 💵\nوظيفتك : خياط 🧵\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 2300 دولار 💵\nوظيفتك : خياط 🧵\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "30" then
 local ratpep = ballancee + 7100
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 7100 جنيه 💵\nوظيفتك : طيار 🛩\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 7100 دولار 💵\nوظيفتك : طيار 🛩\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "31" then
 local ratpep = ballancee + 5300
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 5300 جنيه 💵\nوظيفتك : مودل 🕴\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 5300 دولار 💵\nوظيفتك : مودل 🕴\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "32" then
 local ratpep = ballancee + 10000
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 10000 جنيه 💵\nوظيفتك : ملك 👑\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 10000 دولار 💵\nوظيفتك : ملك 👑\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "33" then
 local ratpep = ballancee + 2700
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 2700 جنيه 💵\nوظيفتك : سباك 🔧\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 2700 دولار 💵\nوظيفتك : سباك 🔧\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "34" then
 local ratpep = ballancee + 3900
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3900 جنيه 💵\nوظيفتك : موزع 🗺\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3900 دولار 💵\nوظيفتك : موزع 🗺\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "35" then
 local ratpep = ballancee + 4100
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 4100 جنيه 💵\nوظيفتك : سكيورتي 👮\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 4100 دولار 💵\nوظيفتك : سكيورتي 👮\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "36" then
 local ratpep = ballancee + 3500
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3500 جنيه 💵\nوظيفتك : معلم شاورما 🌯\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه ??","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3500 دولار 💵\nوظيفتك : معلم شاورما 🌯\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار ??","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "37" then
 local ratpep = ballancee + 6700
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 6700 جنيه 💵\nوظيفتك : دكتور ولاده 👨\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 6700 دولار 💵\nوظيفتك : دكتور ولاده 👨\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "38" then
 local ratpep = ballancee + 6600
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 6600 جنيه 💵\nوظيفتك : مذيع 🗣\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 6600 دولار 💵\nوظيفتك : مذيع 🗣\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "39" then
 local ratpep = ballancee + 3400
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3400 جنيه 💵\nوظيفتك : عامل مساج 💆\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3400 دولار 💵\nوظيفتك : عامل مساج 💆\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "40" then
 local ratpep = ballancee + 6300
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 6300 جنيه 💵\nوظيفتك : ممثل 🤵\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 6300 دولار 💵\nوظيفتك : ممثل 🤵\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "41" then
 local ratpep = ballancee + 3000
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3000 جنيه 💵\nوظيفتك : جزار 🥩\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3000 دولار 💵\nوظيفتك : جزار 🥩\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "42" then
 local ratpep = ballancee + 7000
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 7000 جنيه 💵\nوظيفتك : مدير بنك 💳\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 7000 دولار 💵\nوظيفتك : مدير بنك 💳\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "43" then
 local ratpep = ballancee + 6000
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 6000 جنيه 💵\nوظيفتك : مبرمج 👨\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 6000 دولار 💵\nوظيفتك : مبرمج 👨\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "44" then
 local ratpep = ballancee + 5000
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 5000 جنيه 💵\nوظيفتك : رقاصه 💃\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 5000 دولار 💵\nوظيفتك : رقاصه 💃\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "45" then
 local ratpep = ballancee + 4900
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 4900 جنيه 💵\nوظيفتك : 👩🏼‍💻 صحفي\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 4900 دولار 💵\nوظيفتك : 👩🏼‍💻 صحفي\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "46" then
 local ratpep = ballancee + 5300
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 5300 جنيه 💵\nوظيفتك : 🥷 حرامي\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 5300 دولار 💵\nوظيفتك : 🥷 حرامي\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "47" then
 local ratpep = ballancee + 6000
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 6000 جنيه 💵\nوظيفتك : 🔮 ساحر\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 6000 دولار 💵\nوظيفتك : 🔮 ساحر\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "48" then
 local ratpep = ballancee + 6500
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 6500 جنيه 💵\nوظيفتك : ⚽ لاعب️\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 6500 دولار 💵\nوظيفتك : ⚽ لاعب️\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "49" then
 local ratpep = ballancee + 4000
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 4000 جنيه 💵\nوظيفتك : 🖼 مصور\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 4000 دولار 💵\nوظيفتك : 🖼 مصور\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "50" then
 local ratpep = ballancee + 3000
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3000 جنيه 💵\nوظيفتك : ☎️ عامل مقسم\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3000 دولار 💵\nوظيفتك : ☎️ عامل مقسم\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "51" then
 local ratpep = ballancee + 3200
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3200 جنيه 💵\nوظيفتك : 📖 كاتب\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 3200 دولار 💵\nوظيفتك : 📖 كاتب\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 elseif Descriptioont == "52" then
 local ratpep = ballancee + 4000
 Redis:set("boob"..msg.sender_id.user_id , math.floor(ratpep))
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 4000 جنيه 💵\nوظيفتك : 🧪 مخبري\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id,"اشعار ايداع "..neews.."\nالمبلغ : 4000 دولار 💵\nوظيفتك : 🧪 مخبري\nنوع العملية : اضافة راتب\nرصيدك حاليا : "..convert_mony.." دولار 💵","md",true)
 Redis:setex("iiioo" .. msg.sender_id.user_id,600, true)
 end
 else
@@ -22068,7 +22054,7 @@ local coniss = coin(UserName)
 ballanceed = Redis:get("boob"..msg.sender_id.user_id) or 0
 krses = tonumber(Redis:get("kreednum"..msg.sender_id.user_id))
 if Redis:get("kreed"..msg.sender_id.user_id) and tonumber(ballanceed) > 5000000 then
-return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." جنيه 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." دولار 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
 end
 local F_Name = bot.getUser(msg.sender_id.user_id).first_name
 Redis:set(msg.sender_id.user_id.."first_name:", F_Name)
@@ -22095,13 +22081,13 @@ if Redis:sismember("booob",Remsg.sender_id.user_id) then
 ballancope = Redis:get("boob"..msg.sender_id.user_id) or 0
 ballanceed = Redis:get("boob"..Remsg.sender_id.user_id) or 0
 if tonumber(ballancope) < 100000 then
-return bot.sendText(msg.chat_id,msg.id, "⇜ لا يمكنك تهجم فلوسك اقل من 100000 جنيه 💵","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ لا يمكنك تهجم فلوسك اقل من 100000 دولار 💵","md",true)
 end
 if tonumber(ballanceed) < 100000 then
-return bot.sendText(msg.chat_id,msg.id, "⇜ لا يمكنك تهجم عليه فلوسه اقل من 100000 جنيه 💵","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ لا يمكنك تهجم عليه فلوسه اقل من 100000 دولار 💵","md",true)
 end
 if tonumber(coniss) < 9999 then
-return bot.sendText(msg.chat_id,msg.id, "⇜ الحد الادنى المسموح هو 10000 جنيه 💵\n✦","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ الحد الادنى المسموح هو 10000 دولار 💵\n✦","md",true)
 end
 if tonumber(ballancope) < tonumber(coniss) then
 return bot.sendText(msg.chat_id,msg.id, "⇜ فلوسك لا تكفي \n✦","md",true)
@@ -22132,7 +22118,7 @@ Redis:set("boob"..msg.sender_id.user_id , math.floor(zrfne))
 Redis:set("boob"..Remsg.sender_id.user_id , math.floor(zrfnee))
 Redis:setex("attack" .. msg.sender_id.user_id,600, true)
 local convert_mony = string.format("%.0f",coniss)
-bot.sendText(msg.chat_id,msg.id, "⇜ لقد خسرت في المعركة "..neews.." 🛡\nالفائز : "..neewss.."\nالخاسر : "..neews.."\nالجائزة : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ لقد خسرت في المعركة "..neews.." 🛡\nالفائز : "..neewss.."\nالخاسر : "..neews.."\nالجائزة : "..convert_mony.." دولار 💵\n✦","md",true)
 elseif Descriptioont == "2" or Descriptioont == "4" or Descriptioont == "5" or  Descriptioont == "6" or Descriptioont == "8" then
 local ballanceed = Redis:get("boob"..Remsg.sender_id.user_id) or 0
 local ballancope = Redis:get("boob"..msg.sender_id.user_id) or 0
@@ -22149,7 +22135,7 @@ Redis:set("boob"..Remsg.sender_id.user_id , math.floor(zrfnee))
 Redis:setex("defen" .. Remsg.sender_id.user_id,1800, true)
 Redis:set("numattack"..msg.sender_id.user_id , math.floor(numattackk))
 local convert_mony = string.format("%.0f",math.floor(attack))
-bot.sendText(msg.chat_id,msg.id, "⇜ لقد فزت في المعركة\nودمرت قلعة "..neewss.." 🏰\nالفائز : "..neews.."\nالخاسر : "..neewss.."\nالجائزة : "..convert_mony.." جنيه 💵\nنسبة قوة المهاجم اصبحت "..numattackk.." 🩸\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ لقد فزت في المعركة\nودمرت قلعة "..neewss.." 🏰\nالفائز : "..neews.."\nالخاسر : "..neewss.."\nالجائزة : "..convert_mony.." دولار 💵\nنسبة قوة المهاجم اصبحت "..numattackk.." 🩸\n✦","md",true)
 elseif Descriptioont == "7" then
 local ballanceed = Redis:get("boob"..Remsg.sender_id.user_id) or 0
 local ballancope = Redis:get("boob"..msg.sender_id.user_id) or 0
@@ -22160,7 +22146,7 @@ Redis:set("boob"..msg.sender_id.user_id , math.floor(zrfne))
 Redis:set("boob"..Remsg.sender_id.user_id , math.floor(zrfnee))
 Redis:setex("attack" .. msg.sender_id.user_id,600, true)
 local convert_mony = string.format("%.0f",math.floor(halfzrf))
-bot.sendText(msg.chat_id,msg.id, "⇜ لقد خسرت في المعركة "..neews.." 🛡\nولكن استطعت اعادة نصف الموارد\nالفائز : "..neewss.."\nالخاسر : "..neews.."\nالجائزة : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ لقد خسرت في المعركة "..neews.." 🛡\nولكن استطعت اعادة نصف الموارد\nالفائز : "..neewss.."\nالخاسر : "..neews.."\nالجائزة : "..convert_mony.." دولار 💵\n✦","md",true)
 end
 else
 bot.sendText(msg.chat_id,msg.id, "⇜ لا يمتلك حساب بنكي ","md",true)
@@ -22202,7 +22188,7 @@ if text and text:match("^زواج (.*)$") and msg.reply_to_message_id ~= 0 then
 ballanceed = Redis:get("boob"..msg.sender_id.user_id) or 0
 krses = tonumber(Redis:get("kreednum"..msg.sender_id.user_id))
 if Redis:get("kreed"..msg.sender_id.user_id) and tonumber(ballanceed) > 5000000 then
-return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." جنيه 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." دولار 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
 end
 local F_Name = bot.getUser(msg.sender_id.user_id).first_name
 Redis:set(msg.sender_id.user_id.."first_name:", F_Name)
@@ -22215,7 +22201,7 @@ bot.sendText(msg.chat_id,msg.id,"\n*⇜ زوجتك نفسي 🤣😒*","md",true
 return false
 end
 if tonumber(coniss) < 10000 then
-return bot.sendText(msg.chat_id,msg.id, "⇜ الحد الادنى المسموح به هو 10000 جنيه \n✦","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ الحد الادنى المسموح به هو 10000 دولار \n✦","md",true)
 end
 ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 if tonumber(ballancee) < 10000 then
@@ -22280,7 +22266,7 @@ Redis:set("roog1"..Remsg.sender_id.user_id,msg.sender_id.user_id)
 Redis:set("rahrr1"..msg.sender_id.user_id,math.floor(ballanceekkk))
 Redis:set("rooga1"..Remsg.sender_id.user_id,Remsg.sender_id.user_id)
 Redis:set("rahrr1"..Remsg.sender_id.user_id,math.floor(ballanceekkk))
-bot.sendText(msg.chat_id,msg.id, "كولولولولويششش\nاليوم عقدنا قران :\n\nالزوج "..neews.." 🤵🏻\n   💗\nالزوجة "..newws.." 👰🏻‍♀️\nالمهر : "..convert_mony.." جنيه بعد الضريبة 15%\nعشان تشوفون وثيقة زواجكم اكتبوا : *زواجي*","md",true)
+bot.sendText(msg.chat_id,msg.id, "كولولولولويششش\nاليوم عقدنا قران :\n\nالزوج "..neews.." 🤵🏻\n   💗\nالزوجة "..newws.." 👰🏻‍♀️\nالمهر : "..convert_mony.." دولار بعد الضريبة 15%\nعشان تشوفون وثيقة زواجكم اكتبوا : *زواجي*","md",true)
 else
 bot.sendText(msg.chat_id,msg.id, "⇜ انت لا تمتلك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
 end
@@ -22349,7 +22335,7 @@ Redis:set(msg.sender_id.user_id.."first_name:", F_Name)
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url="t.me/LEDARQ "},
+{text = '•SOURCE  MAS •', url="t.me/source_maas "},
 },
 }
 }
@@ -22376,7 +22362,7 @@ newws = "["..ban.first_name.."](tg://user?id="..ban.id..")"
 else
 newws = " لا يوجد"
 end
-bot.sendText(msg.chat_id,msg.id, "وثيقة الزواج حقتك :\n\nالزوج "..neews.." 🤵🏻\nالزوجة "..newws.." 👰🏻‍♀️\nالمهر : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id, "وثيقة الزواج حقتك :\n\nالزوج "..neews.." 🤵🏻\nالزوجة "..newws.." 👰🏻‍♀️\nالمهر : "..convert_mony.." دولار 💵","md",true)
 else
 bot.sendText(msg.chat_id,msg.id, "⇜ انت اعزب","md",true)
 end
@@ -22421,7 +22407,7 @@ end
 local otheka = ballancee - 100
 local convert_mony = string.format("%.0f",mahr)
 Redis:set("boob"..msg.sender_id.user_id , math.floor(otheka))
-bot.sendText(msg.chat_id,msg.id, "وثيقة الزواج حقته :\n\nالزوج "..neews.." 🤵🏻\nالزوجة "..newws.." 👰🏻‍♀️\nالمهر : "..convert_mony.." جنيه 💵","md",true)
+bot.sendText(msg.chat_id,msg.id, "وثيقة الزواج حقته :\n\nالزوج "..neews.." 🤵🏻\nالزوجة "..newws.." 👰🏻‍♀️\nالمهر : "..convert_mony.." دولار 💵","md",true)
 else
 bot.sendText(msg.chat_id,msg.id, "⇜ انت لا تمتلك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
 end
@@ -22493,7 +22479,7 @@ ballancee = Redis:get("boob"..zoog) or 0
 kalea = ballancee + mahrr
 Redis:set("boob"..zoog , kalea)
 local convert_mony = string.format("%.0f",mahrr)
-bot.sendText(msg.chat_id,msg.id, "⇜ خلعت زوجك "..neews.."\n⇜ ورجعت له المهر ( "..convert_mony.." جنيه 💵 )","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ خلعت زوجك "..neews.."\n⇜ ورجعت له المهر ( "..convert_mony.." دولار 💵 )","md",true)
 Redis:srem("roogg1", zoog)
 Redis:srem("roogga1", zoog)
 Redis:del("roog1"..zoog)
@@ -22520,7 +22506,7 @@ if text and text:match('^مراهنه (.*)$') or text and text:match('^مراه�
 local UserName = text:match('^مراهنه (.*)$') or text:match('^مراهنة (.*)$')
 krses = tonumber(Redis:get("kreednum"..msg.sender_id.user_id))
 if Redis:get("kreed"..msg.sender_id.user_id) and tonumber(ballanceed) > 5000000 then
-return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." جنيه 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." دولار 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
 end
 local coniss = coin(UserName)
 ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
@@ -22571,14 +22557,14 @@ Redis:del(MisTiri.."Start_rhan"..msg.chat_id)
 local ballancee = Redis:get("boob"..UserName) or 0
 local convert_mony = string.format("%.0f",benrahan)
 local convert_monyy = string.format("%.0f",ballancee)
-return bot.sendText(msg.chat_id,msg.id,'⇜ فاز '..ls..' بالرهان 🎊\nالمبلغ : '..convert_mony..' جنيه 💵\nرصيدك حاليا : '..convert_monyy..' جنيه 💵\n✦',"md",true)
+return bot.sendText(msg.chat_id,msg.id,'⇜ فاز '..ls..' بالرهان 🎊\nالمبلغ : '..convert_mony..' دولار 💵\nرصيدك حاليا : '..convert_monyy..' دولار 💵\n✦',"md",true)
 end
 end
 if text == 'كنز' then
 ballanceed = Redis:get("boob"..msg.sender_id.user_id) or 0
 krses = tonumber(Redis:get("kreednum"..msg.sender_id.user_id))
 if Redis:get("kreed"..msg.sender_id.user_id) and tonumber(ballanceed) > 5000000 then
-return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." جنيه 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
+return bot.sendText(msg.chat_id,msg.id, "⇜ عليك قرض بقيمة "..krses.." دولار 💵 \nقم بسداده بالامر `تسديد القرض` ","md",true)
 end
 local F_Name = bot.getUser(msg.sender_id.user_id).first_name
 Redis:set(msg.sender_id.user_id.."first_name:", F_Name)
@@ -22601,154 +22587,154 @@ local knez = ballancee + 40000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : قطعة اثرية 🗳\nسعره : 40000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : قطعة اثرية 🗳\nسعره : 40000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioont == "2" then
 local knez = ballancee + 35000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : حجر الدايموندي 💎\nسعره : 35000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : حجر الماسي 💎\nسعره : 35000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioont == "3" then
 local knez = ballancee + 10000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : لباس قديم 🥻\nسعره : 10000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : لباس قديم 🥻\nسعره : 10000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioont == "4" then
 local knez = ballancee + 23000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : عصى سحرية 🪄\nسعره : 23000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : عصى سحرية 🪄\nسعره : 23000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioont == "5" then
 local knez = ballancee + 8000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : جوال نوكيا 📱\nسعره : 8000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : جوال نوكيا 📱\nسعره : 8000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioont == "6" then
 local knez = ballancee + 27000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : صدف 🏝\nسعره : 27000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : صدف 🏝\nسعره : 27000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioont == "7" then
 local knez = ballancee + 18000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : ابريق صدئ ⚗️\nسعره : 18000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : ابريق صدئ ⚗️\nسعره : 18000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioont == "8" then
 local knez = ballancee + 100000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : قناع فرعوني 🗿\nسعره : 100000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : قناع فرعوني 🗿\nسعره : 100000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioont == "9" then
 local knez = ballancee + 50000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : جرة ذهب 💰\nسعره : 50000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : جرة ذهب 💰\nسعره : 50000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioont == "10" then
 local knez = ballancee + 36000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : مصباح فضي 🔦\nسعره : 36000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : مصباح فضي 🔦\nسعره : 36000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioont == "11" then
 local knez = ballancee + 29000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : لوحة نحاسية 🌇\nسعره : 29000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : لوحة نحاسية 🌇\nسعره : 29000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioont == "12" then
 local knez = ballancee + 1000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : جوارب قديمة 🧦\nسعره : 1000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : جوارب قديمة 🧦\nسعره : 1000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioont == "13" then
 local knez = ballancee + 16000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : اناء فخاري ⚱️\nسعره : 16000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : اناء فخاري ⚱️\nسعره : 16000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioont == "14" then
 local knez = ballancee + 12000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : خوذة محارب 🪖\nسعره : 12000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : خوذة محارب 🪖\nسعره : 12000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioont == "15" then
 local knez = ballancee + 19000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : سيف جدي مرزوق 🗡\nسعره : 19000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : سيف جدي مرزوق 🗡\nسعره : 19000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioont == "16" then
 local knez = ballancee + 14000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : مكنسة جدتي رقية 🧹\nسعره : 14000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : مكنسة جدتي رقية 🧹\nسعره : 14000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioont == "17" then
 local knez = ballancee + 26000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : فأس ارطغرل 🪓\nسعره : 26000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : فأس ارطغرل 🪓\nسعره : 26000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioont == "18" then
 local knez = ballancee + 22000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : بندقية 🔫\nسعره : 22000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : بندقية 🔫\nسعره : 22000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioont == "19" then
 local knez = ballancee + 11000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : كبريت ناري 🪔\nسعره : 11000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : كبريت ناري 🪔\nسعره : 11000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioont == "20" then
 local knez = ballancee + 33000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : فرو ثعلب 🦊\nسعره : 33000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : فرو ثعلب 🦊\nسعره : 33000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioont == "21" then
 local knez = ballancee + 40000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : جلد تمساح 🐊\nسعره : 40000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : جلد تمساح 🐊\nسعره : 40000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioont == "22" then
 local knez = ballancee + 17000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : باقة ورود 💐\nسعره : 17000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : باقة ورود 💐\nسعره : 17000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioont == "23" then
 local Textinggtt = {"1", "2",}
@@ -22758,7 +22744,7 @@ local knez = ballancee + 17000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : باقة ورود 💐\nسعره : 17000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : باقة ورود 💐\nسعره : 17000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioontt == "2" then
 local Textinggttt = {"1", "2",}
@@ -22768,14 +22754,14 @@ local knez = ballancee + 40000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : جلد تمساح 🐊\nسعره : 40000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : جلد تمساح 🐊\nسعره : 40000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 elseif Descriptioonttt == "2" then
 local knez = ballancee + 10000000
 Redis:set("boob"..msg.sender_id.user_id , knez)
 local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
-bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : حقيبة محاسب البنك 💼\nسعره : 10000000 جنيه 💵\nرصيدك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id,""..neews.." لقد وجدت كنز\nالكنز : حقيبة محاسب البنك 💼\nسعره : 10000000 دولار 💵\nرصيدك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 Redis:setex("yiioooo" .. msg.sender_id.user_id,1800, true)
 end
 end
@@ -22807,7 +22793,7 @@ if tonumber(msg.sender_id.user_id) == tonumber(Sudo_Id) then
 numcobo = math.random(1000000000000,9999999999999);
 Redis:set("cobonum"..numcobo,numcobo)
 Redis:set("cobon"..numcobo,coniss)
-bot.sendText(msg.chat_id,msg.id, "⇜ وصل كوبون \n\nالمبلغ : "..coniss.." جنيه 💵\nرقم الكوبون : `"..numcobo.."`\n\n⇜ طريقة استخدام الكوبون :\nتكتب ( كوبون + رقمه )\nمثال : كوبون 4593875\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ وصل كوبون \n\nالمبلغ : "..coniss.." دولار 💵\nرقم الكوبون : `"..numcobo.."`\n\n⇜ طريقة استخدام الكوبون :\nتكتب ( كوبون + رقمه )\nمثال : كوبون 4593875\n✦","md",true)
 end
 end
 if text == "كوبون" or text == "الكوبون" then
@@ -22827,7 +22813,7 @@ local ballancee = Redis:get("boob"..msg.sender_id.user_id) or 0
 local convert_mony = string.format("%.0f",ballancee)
 Redis:del("cobon"..coniss)
 Redis:del("cobonum"..coniss)
-bot.sendText(msg.chat_id,msg.id, "⇜ وصل كوبون \n\nالمبلغ : "..cobblc.." جنيه 💵\nرقم الكوبون : `"..coniss.."`\nفلوسك حاليا : "..convert_mony.." جنيه 💵\n✦","md",true)
+bot.sendText(msg.chat_id,msg.id, "⇜ وصل كوبون \n\nالمبلغ : "..cobblc.." دولار 💵\nرقم الكوبون : `"..coniss.."`\nفلوسك حاليا : "..convert_mony.." دولار 💵\n✦","md",true)
 else
 bot.sendText(msg.chat_id,msg.id, "⇜ لا يوجد كوبون بهذا الرقم `"..coniss.."`\n✦","md",true)
 end
@@ -22844,7 +22830,7 @@ data = {
 {text = 'الزرف', data = msg.sender_id.user_id..'/topzrf'},{text = 'الفلوس', data = msg.sender_id.user_id..'/topmon'},
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url="t.me/LEDARQ "},
+{text = '•SOURCE  MAS •', url="t.me/source_maas "},
 },
 }
 }
@@ -23015,7 +23001,7 @@ Redis:set(MisTiri.."Game:Reflection"..msg.chat_id,name)
 name = string.gsub(name,"باي","هلو")
 name = string.gsub(name,"فهمت","مافهمت")
 name = string.gsub(name,"موزين","زين")
-name = string.gsub(name,"اسمعك","دايموندمعك")
+name = string.gsub(name,"اسمعك","ماسمعك")
 name = string.gsub(name,"احبك","ماحبك")
 name = string.gsub(name,"موحلو","حلو")
 name = string.gsub(name,"نضيف","وصخ")
@@ -23219,7 +23205,7 @@ t16 =[[
 t17 =[[
 اصفر اللون سارق عكول اهل الكون وحارمهم لذيذ النوم
 1- نحاس
-2- الدايموند
+2- الماس
 3- ذهب
 
 ✠︙ارسل  الجواب الصحيح فقط
@@ -23425,7 +23411,7 @@ if text then
 send(msg.chat_id,msg.id,'*✠︙احسنت اجابتك صحيحه ✓*',"md")     
 Redis:incrby(MisTiri.."Num:Add:Games"..msg.chat_id..msg.sender_id.user_id, 1)  
 Redis:del(MisTiri.."GAME:CHER"..msg.chat_id)
-elseif text == 'الفيل' or text == 'الثور' or text == 'الحصان' or text == '7' or text == '9' or text == '8' or text == 'لوين' or text == 'موسكو' or text == 'مانكو' or text == '20' or text == '30' or text == '28' or text == 'ترامب' or text == 'اوباما' or text == 'كيم جونغ' or text == '50' or text == '70' or text == '40' or text == '7' or text == '3' or text == '10' or text == '4' or text == 'الاذن' or text == 'الثلاجه' or text == 'الغرفه' or text == '15' or text == '17' or text == '25' or text == 'الفرات' or text == 'نهر الكونغو' or text == 'المسيبي' or text == 'بيا بايج' or text == 'لاري بيج' or text == 'بيا مارك زوكيربرج' or text == 'الفيل' or text == 'النمر' or text == 'الفهد' or text == 'بانكول' or text == 'نيو دلهي' or text == 'بيكن' or text == 'الهاتف' or text == 'التلفاز' or text == 'المذياع' or text == 'لفرسول' or text == 'تركيا' or text == 'بغداد' or text == 'النحاس' or text == 'الحديد' or text == 'الفضه' or text == 'امريكا الشماليه' or text == 'امريكا الجنوبيه' or text == 'افريقيا' or text == 'القرش' or text == 'الثعلب' or text == 'الكلب' or text == 'للجرو' or text == 'العجل' or text == 'الحمار' or text == '3' or text == '5' or text == '6' or text == 'اوربا' or text == 'افريقيا' or text == 'امريكا الجنوبيه' or text == 'افريقيا' or text == 'امريكا الشماليه' or text == 'اوربا' or text == 'الصاروخ' or text == 'المسدس' or text == 'الطائرات' or text == 'سيدات' or text == 'قوانص' or text == 'عوانس' or text == 'المكارم' or text == 'المبائم' or text == 'المعازم' or text == 'حرف الغاء' or text == 'حرف الواو' or text == 'حرف النون' or text == 'نحاس' or text == 'الدايموند' or text == 'حديد' or text == 'العمر' or text == 'ساعه' or text == 'الحذاء' or text == 'بئر' or text == 'نهر' or text == 'شلال' or text == 'ادم' or text == 'نوح' or text == 'عيسئ' or text == 'الاضافر' or text == 'الاسنان' or text == 'الدموع' or text == 'الاخلاق' or text == 'الضل' or text == 'حرف النون'  then
+elseif text == 'الفيل' or text == 'الثور' or text == 'الحصان' or text == '7' or text == '9' or text == '8' or text == 'لوين' or text == 'موسكو' or text == 'مانكو' or text == '20' or text == '30' or text == '28' or text == 'ترامب' or text == 'اوباما' or text == 'كيم جونغ' or text == '50' or text == '70' or text == '40' or text == '7' or text == '3' or text == '10' or text == '4' or text == 'الاذن' or text == 'الثلاجه' or text == 'الغرفه' or text == '15' or text == '17' or text == '25' or text == 'الفرات' or text == 'نهر الكونغو' or text == 'المسيبي' or text == 'بيا بايج' or text == 'لاري بيج' or text == 'بيا مارك زوكيربرج' or text == 'الفيل' or text == 'النمر' or text == 'الفهد' or text == 'بانكول' or text == 'نيو دلهي' or text == 'بيكن' or text == 'الهاتف' or text == 'التلفاز' or text == 'المذياع' or text == 'لفرسول' or text == 'تركيا' or text == 'بغداد' or text == 'النحاس' or text == 'الحديد' or text == 'الفضه' or text == 'امريكا الشماليه' or text == 'امريكا الجنوبيه' or text == 'افريقيا' or text == 'القرش' or text == 'الثعلب' or text == 'الكلب' or text == 'للجرو' or text == 'العجل' or text == 'الحمار' or text == '3' or text == '5' or text == '6' or text == 'اوربا' or text == 'افريقيا' or text == 'امريكا الجنوبيه' or text == 'افريقيا' or text == 'امريكا الشماليه' or text == 'اوربا' or text == 'الصاروخ' or text == 'المسدس' or text == 'الطائرات' or text == 'سيدات' or text == 'قوانص' or text == 'عوانس' or text == 'المكارم' or text == 'المبائم' or text == 'المعازم' or text == 'حرف الغاء' or text == 'حرف الواو' or text == 'حرف النون' or text == 'نحاس' or text == 'الماس' or text == 'حديد' or text == 'العمر' or text == 'ساعه' or text == 'الحذاء' or text == 'بئر' or text == 'نهر' or text == 'شلال' or text == 'ادم' or text == 'نوح' or text == 'عيسئ' or text == 'الاضافر' or text == 'الاسنان' or text == 'الدموع' or text == 'الاخلاق' or text == 'الضل' or text == 'حرف النون'  then
 local list = {'10' , 'براسي' , 'النمل' , '32' , 'بوتين' , '30' , '11' , 'الفم' , '14' , 'النيل' , 'ستيف جوبر' , 'خديجه' , 'الاسد' , 'طوكيو' , 'الانسان' , 'لندن' , 'الزئبق' , 'اورباالدولفين' , 'المهر' , '4' , 'اسيا' , 'اسيا' , 'المنجنيق' , 'انسات' , 'العزائم' , 'حرف الام' , 'ذهب' , 'الاسم' , 'سحاب' , 'ابراهيم' , 'الشعر' , 'حرف الواو'}
 for k, v in pairs(list) do 
 if text ~= v then
@@ -24103,7 +24089,7 @@ if text == '/start' then
 Redis:sadd(MisTiri..'Num:User:Pv',msg.sender_id.user_id)  
 if not msg.Asasy then
 if not Redis:get(MisTiri.."Start:Bot") then
-local CmdStart = '*\n✠︙ أهلآ بك في بوت '..(Redis:get(MisTiri.."Name:Bot") or "دايموند")..
+local CmdStart = '*\n✠︙ أهلآ بك في بوت '..(Redis:get(MisTiri.."Name:Bot") or "ماس")..
 '\n✠︙ اختصاص البوت حماية المجموعات'..
 '\n✠︙ لتفعيل البوت عليك اتباع مايلي ...'..
 '\n✠︙ اضف البوت الى مجموعتك'..
@@ -24117,10 +24103,10 @@ data = {
 {text = '⌯ اضفني لمجموعتك .', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = '⌯ لتنصيب بوت .', url = 't.me/LEDARQ /113'},
+{text = '⌯ لتنصيب بوت .', url = '@QQWGT'},
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -24133,10 +24119,10 @@ data = {
 {text = '⌯ اضفني لمجموعتك .', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = '⌯ لتنصيب بوت .', url = 't.me/LEDARQ /113'},
+{text = '⌯ لتنصيب بوت .', url = '@QQWGT'},
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -24216,7 +24202,7 @@ data = {
 },
 }
 }
-return send(msg_chat_id,msg_id,' ✠︙ اهلا عزيزي آلمـطـور\n ✠︙ آنت آلمـطـور آلآسـآسـي للبوت\n• — — — — — — — — — •\n ✠︙ تسـتطـيع‌‏ آلتحگم باوامر البوت\n ✠︙ من خلاال الكيبورت خاص بك\n ✠︙ قناة سورس البوت [اضغط هنا](https://t.me/LEDARQ )', 'md', false, false, false, false, reply_markup)
+return send(msg_chat_id,msg_id,' ✠︙ اهلا عزيزي آلمـطـور\n ✠︙ آنت آلمـطـور آلآسـآسـي للبوت\n• — — — — — — — — — •\n ✠︙ تسـتطـيع‌‏ آلتحگم باوامر البوت\n ✠︙ من خلاال الكيبورت خاص بك\n ✠︙ قناة سورس البوت [اضغط هنا](https://t.me/source_maas )', 'md', false, false, false, false, reply_markup)
 end
 end
 if Redis:get(MisTiri.."set:rmz"..msg.sender_id.user_id) then
@@ -25617,7 +25603,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -25639,14 +25625,14 @@ if Redis:get(MisTiri..'Set:array'..IdUser..':'..ChatId) == 'true1' then
 Redis:del(MisTiri..'Set:array'..IdUser..':'..ChatId)
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •',url='http://t.me/LEDARQ '}},
+{{text = '•SOURCE  MAS •',url='http://t.me/source_maas '}},
 }
 local msg_idd = Msg_id/2097152/0.5
 return https.request("https://api.telegram.org/bot"..Token..'/editMessageText?chat_id='..ChatId..'&text='..URL.escape(" *✠︙تم حفظ الردود بنجاح*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 else
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •',url='http://t.me/LEDARQ '}},
+{{text = '•SOURCE  MAS •',url='http://t.me/source_maas '}},
 }
 return https.request("https://api.telegram.org/bot"..Token..'/editMessageText?chat_id='..ChatId..'&text='..URL.escape(" *✠︙تم تنفيذ الامر سابقا*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -25658,7 +25644,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
     {
-    {text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 'https://t.me/LEDARQ '}, 
+    {text = '•SOURCE  MAS •', url = 'https://t.me/source_maas '}, 
     },
     }
     }
@@ -25713,7 +25699,7 @@ if Text and Text:match('(%d+)/cancelSection') then
     type = 'inline',
     data = {
         {
-        {text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 'https://t.me/LEDARQ '}, 
+        {text = '•SOURCE  MAS •', url = 'https://t.me/source_maas '}, 
         },
         }
         }
@@ -26043,7 +26029,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -26061,7 +26047,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -26127,7 +26113,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -26187,7 +26173,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -26276,7 +26262,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -26361,7 +26347,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -26420,7 +26406,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -26464,7 +26450,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -26520,7 +26506,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -26551,11 +26537,11 @@ local TextHelp = [[*
 ✠︙اوامر الترفيه 
 • — — — — — — — — — •
 ✠︙زخرفه + النص
-✠︙مثال زخرفه دايموند
+✠︙مثال زخرفه ماس
 ✠︙احسب + عمرك
 ✠︙مثال احسب 2001/8/5
 ✠︙معني + الاسم 
-✠︙مثال معني دايموند
+✠︙مثال معني ماس
 • — — — — — — — — — •
 ✠︙نسبه الحب/ الكره
 ✠︙نسبه الرجوله/ الانوثه 
@@ -26593,7 +26579,7 @@ data = {
 {text = '{ القفل / الفتح }', data = IdUser..'/NoNextSeting'}, {text = '{ التعطيل / التفعيل }', data = IdUser..'/listallAddorrem'}, 
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -26635,7 +26621,7 @@ data = {
 {text = '{ القفل / الفتح }', data = IdUser..'/NoNextSeting'}, {text = '{ التعطيل / التفعيل }', data = IdUser..'/listallAddorrem'}, 
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -26682,7 +26668,7 @@ local TextHelp = [[*
 ✠︙تفعيل تعطيل جلب النسخه التلقائيه
 ✠︙جلب نسخه احتياطيه
 ✠︙رفع النسخه الاحتياطيه بالرد
-✠︙رفع نسخه  دايموند  بالرد
+✠︙رفع نسخه  ماس  بالرد
 ✠︙جلب نسخه الردود 
 ✠︙رفع نسخه الردود بالرد
 ✠︙معلومات التنصيب
@@ -26756,7 +26742,7 @@ data = {
 {text = '{ القفل / الفتح }', data = IdUser..'/NoNextSeting'}, {text = '{ التعطيل / التفعيل }', data = IdUser..'/listallAddorrem'}, 
 },
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •', url = 't.me/LEDARQ '}, 
+{text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
 },
 }
 }
@@ -28537,7 +28523,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •',url="t.me/LEDARQ "}, 
+{text = '•SOURCE  MAS •',url="t.me/source_maas "}, 
 },
 }
 }
@@ -28595,7 +28581,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '•𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥 •',url="t.me/LEDARQ "}, 
+{text = '•SOURCE  MAS •',url="t.me/source_maas "}, 
 },
 }
 }
