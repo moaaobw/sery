@@ -24117,7 +24117,7 @@ data = {
 {text = '⌯ اضفني لمجموعتك .', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = '⌯ لتنصيب بوت .', url = '@QQWGT'},
+{text = '⌯ لتنصيب بوت .', url = 't.me/QQWGT'},
 },
 {
 {text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
@@ -24133,7 +24133,7 @@ data = {
 {text = '⌯ اضفني لمجموعتك .', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = '⌯ لتنصيب بوت .', url = '@QQWGT'},
+{text = '⌯ لتنصيب بوت .', url = 't.me/QQWGT'},
 },
 {
 {text = '•SOURCE  MAS •', url = 't.me/source_maas '}, 
