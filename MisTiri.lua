@@ -19779,7 +19779,7 @@ end
 ---
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس'  then
 local escanor = bot.getUser(2069112486).first_name
-local mistiri = bot.getUser( 2069112486 ).first_name
+local photo ="https://t.me/osbsjsbsjsbsb/156"
 local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
